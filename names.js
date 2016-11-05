@@ -13,10 +13,10 @@ function sillyname() {
     "клиент","клиент","клиент"][rnd(25)] +
 
     // Last Name
-    ["Waffer","Lilly","Bubblegum","Sand","Fuzzy","Kitty",
-    "Puppy","Snuggles","SpacePrincess","Stinky","Lulu",
-    "Lala","Sparkle","Glitter",
-    "Silver","Golden","Rainbow","Cloud",
-    "Rain","Stormy","Wink","Sugar",
-    "Twinkle","Star","Halo","Angel"][rnd(25)];
+    ["","","","","","",
+    "","","","","",
+    "","","",
+    "","","","",
+    "","","","",
+    "","","",""][rnd(25)];
 }
