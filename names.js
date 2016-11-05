@@ -6,11 +6,11 @@ function sillyname() {
     function rnd(n) { return Math.floor(Math.random()*n) }
 
     // First Name
-    return ["Runny","Buttercup","Dinky","Princess","Crusty",
-    "Greasy","Gidget","Cheesypoof","Lumpy","Wacky","Tiny","Flunky",
-    "Fluffy","Zippy","Doofus","Gobsmacked","Slimy","Grimy","Salamander",
-    "Dr","Burrito","Bumpy","Loopy",
-    "Snotty","Irving","Egbert"][rnd(25)] +
+    return ["аноним","аноним","аноним","аноним","пользователь",
+    "аноним","аноним","пользователь","пользователь","аноним","пользователь","пользователь",
+    "аноним","клиент","клиент","пользователь","пользователь","пользователь","пользователь",
+    "клиент","клиент","клиент","клиент",
+    "клиент","клиент","клиент"][rnd(25)] +
 
     // Last Name
     ["Waffer","Lilly","Bubblegum","Sand","Fuzzy","Kitty",
