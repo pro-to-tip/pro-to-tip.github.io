@@ -106,7 +106,7 @@ body {
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background: rgba(255, 255, 255, 0.1);
+  background: #999;
 }
 
  /*
