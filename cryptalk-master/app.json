@@ -1,0 +1,15 @@
+{
+  "name": "Cryptalk",
+  "description": "Client side (E2EE) encrypted instant chat",
+  "keywords": [
+    "cryptalk",
+    "fandango",
+    "crypto-js",
+    "AES",
+    "secure",
+    "html5",
+    "encryption",
+    "privacy"
+  ],
+  "repository": "https://github.com/Hexagon/cryptalk"
+}
