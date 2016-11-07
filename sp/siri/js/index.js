@@ -11,8 +11,8 @@ $(function() {
     firstHit: 'https://duckduckgo.com/?q=!'
   }*/
   var keywords = [{
-    keyword: 'Фейсбук',
-    url: 'https://facebook.com/search/?q='
+    keyword: 'ремонт',
+    url: 'http://www.remonttoreks.com'
   }, {
     keyword: 'Ютуб',
     url: 'https://www.youtube.com/results?search_query='
