@@ -28,7 +28,7 @@
   }
 }
 body, html {
-  background-color: #fff;
+  background-color: transparent;
   color: #000;
   -webkit-font-smoothing: antialiased;
 }
