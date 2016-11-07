@@ -88,18 +88,17 @@
   <p id="info_speak_now">Говорите</p>
   <p id="info_no_speech">не слышно - что то не так
     <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
-      microphone settings</a>.</p>
+      проверьте настройки микрофона</a>.</p>
   <p id="info_no_microphone" style="display:none">
-    No microphone was found. Ensure that a microphone is installed and that
+    майкрофон нот детектед
     <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
-    microphone settings</a> are configured correctly.</p>
+    в настройках </a> поковыряйтесь</p>
   <p id="info_allow">Click the "Allow" button above to enable your microphone.</p>
   <p id="info_denied">Permission to use microphone was denied.</p>
   <p id="info_blocked">Permission to use microphone is blocked. To change,
     go to chrome://settings/contentExceptions#media-stream</p>
-  <p id="info_upgrade">Web Speech API is not supported by this browser.
-     Upgrade to <a href="//www.google.com/chrome">Chrome</a>
-     version 25 or later.</p>
+  <p id="info_upgrade">ё браузер ис нот суппорт  <a href=""> </a>
+     сорян</p>
 </div>
 <div class="right">
   <button id="start_button" onclick="startButton(event)">
@@ -113,17 +112,17 @@
 <div class="center">
   <div class="sidebyside" style="text-align:right">
     <button id="copy_button" class="button" onclick="copyButton()">
-      Copy and Paste</button>
+      Выделить Текст</button>
     <div id="copy_info" class="info">
-      Press Control-C to copy text.<br>(Command-C on Mac.)
+       Ctrl+C скопировать<br>(Command-C на Mac.)
     </div>
   </div>
   <div class="sidebyside">
     <button id="email_button" class="button" onclick="emailButton()">
-      Create Email</button>
+      Отправить на мэйл</button>
     <div id="email_info" class="info">
-      Text sent to default email application.<br>
-      (See chrome://settings/handlers to change.)
+      текст ту сенд.<br>
+      (chrome://settings/handlers to change.)
     </div>
   </div>
   <p>
@@ -201,9 +200,9 @@ var langs =
 for (var i = 0; i < langs.length; i++) {
   select_language.options[i] = new Option(langs[i][0], i);
 }
-select_language.selectedIndex = 6;
+select_language.selectedIndex = 26;
 updateCountry();
-select_dialect.selectedIndex = 6;
+select_dialect.selectedIndex = 26;
 showInfo('info_start');
 
 function updateCountry() {
