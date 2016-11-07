@@ -28,8 +28,8 @@
   }
 }
 body, html {
-  background-color: #222;
-  color: rgba(255, 255, 255, 0.85);
+  background-color: #fff;
+  color: #000;
   -webkit-font-smoothing: antialiased;
 }
 
