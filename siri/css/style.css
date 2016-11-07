@@ -146,6 +146,9 @@ body {
 #button:active {
   background-color: #dd0022;
 }
+#microphone:active {
+  fill: #000;
+}
 #button #microphone {
   fill: #fff;
   width: 30px;
