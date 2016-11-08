@@ -5,7 +5,7 @@ function init() {
 }
 
 let serverData = {
-    url: "https://ip.jsontest.com",
+    url: "https://api.sypexgeo.net/",
     httpRequest: "GET",
     getJSON: function () {
         fetch(serverData.url, {
