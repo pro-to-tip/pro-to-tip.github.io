@@ -1,5 +1,12 @@
 /* required styles */
 
+
+.leaflet-popup {
+	opacity:0!important;
+}
+
+
+
 .leaflet-map-pane,
 .leaflet-tile,
 .leaflet-marker-icon,
