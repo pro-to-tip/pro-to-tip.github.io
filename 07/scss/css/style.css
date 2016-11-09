@@ -5,3 +5,7 @@
 		html, body, #map {
 			height: 100%;
 		}
+                leaflet-bottom {
+                     bottom: 0;
+                      opacity: 0;
+                 }
