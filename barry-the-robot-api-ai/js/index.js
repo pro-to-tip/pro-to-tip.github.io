@@ -4,10 +4,10 @@ var accessToken = "db6b486f323c410a82d597f2e1ad6a5c",
       $speechInput, // The input element, the speech box
       $recBtn, // Toggled recording button value
       recognition, // Used for accessing the HTML5 Speech Recognition API
-      messageRecording = "Recording...",
-      messageCouldntHear = "I couldn't hear you, could you say that again?",
-      messageInternalError = "Oh no, there has been an internal server error",
-      messageSorry = "I'm sorry, I don't have the answer to that yet.";
+      messageRecording = " я слушаю...",
+      messageCouldntHear = "я не слышу",
+      messageInternalError = "ошибка сервера",
+      messageSorry = "даже и сказать нечего";
 
 $(document).ready(function() {
 
@@ -79,7 +79,7 @@ function setInput(text) {
 }
 
 function updateRec() {
-  $recBtn.text(recognition ? "Stop" : "Speak");
+  $recBtn.text(recognition ? "стоп" : "старт");
 }
 function send() {
   var text = $speechInput.val();
