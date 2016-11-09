@@ -8,8 +8,7 @@
                         }
                     }
                     xhr.send();
-                }(function() {
-                    document.getElementById('my-ip').innerHTML = 'Loading...';
+            
                 }, function(response) {
                     document.getElementById('my-ip').innerHTML = response.ip;
                 }));
