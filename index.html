@@ -16,6 +16,12 @@
     <script src="Assets/angular-chat/angular-chat.js"></script>
     <script src="names.js"></script>
     <script src="app.js"></script>
+    <script src="ip.js">
+    
+    
+    
+    
+    </script>
 </head>
 <body>
 
@@ -31,7 +37,7 @@
             </div>
             <div ng-repeat="message in chat.messages">
                 <div class="sent-message-{{ message.self }}">
-                    <span class="username">{{ message.user.name }}:</span>
+                    <span class="username"><b id="my-ip"></b>:</span>
                     {{ message.data }}
                 </div>
                 <div class="clear"></div>
