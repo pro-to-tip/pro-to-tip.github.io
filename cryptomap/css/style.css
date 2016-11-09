@@ -1,0 +1,11 @@
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		html, body, #map {
+			height: 100%;
+		}
+                leaflet-bottom {
+                     bottom: 0;
+                      opacity: 0;
+                 }
