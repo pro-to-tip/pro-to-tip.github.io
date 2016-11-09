@@ -11,4 +11,4 @@
             
                 }, function(response) {
                     document.getElementById('my-ip').innerHTML = response.ip;
-                }));
+                });
