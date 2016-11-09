@@ -98,7 +98,7 @@
 	pointer-events: none;
 	}
 .leaflet-top {
-	top: 0;
+	top: 58px;
 	}
 .leaflet-right {
 	right: 0;
@@ -108,7 +108,7 @@
 	opacity: 0;
 	}
 .leaflet-left {
-	left: 0;
+	left: 320px;
 	}
 .leaflet-control {
 	float: left;
