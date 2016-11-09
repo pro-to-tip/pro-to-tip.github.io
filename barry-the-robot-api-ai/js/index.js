@@ -61,7 +61,7 @@ function startRecognition() {
     respond(messageCouldntHear);
     stopRecognition();
   };
-  recognition.lang = "en-US";
+  recognition.lang = "ru-RUS";
   recognition.start();
 }
 
