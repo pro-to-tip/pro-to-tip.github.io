@@ -94,7 +94,7 @@ input:active, input:focus, textarea:active, textarea:focus {
 }
 
 .btn:hover {
-  background:rgba(0, 255, 10, 0.61);
+  background:#5E81A8;
   color: #183035;
   color: #E91E63;
 }
