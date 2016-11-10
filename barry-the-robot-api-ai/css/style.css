@@ -40,9 +40,10 @@ body {
 input {
   background-color: #fafbfc;
   border: 0px solid #3F7F93;
-  color: #A6CAE6;
+  color: #5cf863;
   font-family: "Titillium Web";
   font-size: 20px;
+  font-weight:900;
   line-height: 43px;
   padding: 0 0.75em;
   width: 400px;
