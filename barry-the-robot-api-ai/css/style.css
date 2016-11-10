@@ -95,8 +95,8 @@ input:active, input:focus, textarea:active, textarea:focus {
 
 .btn:hover {
   background:#5E81A8;
-  color: #183035;
-  color: #E91E63;
+  color: #fff;
+ /* color: #E91E63;*/
 }
 
 .debug {
