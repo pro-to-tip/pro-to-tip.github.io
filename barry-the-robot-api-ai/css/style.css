@@ -46,6 +46,7 @@ input {
   padding: 0 0.75em;
   width: 400px;
   -webkit-transition: all 0.35s ease-in;
+  border-radius:20px;
 }
 
 textarea {
