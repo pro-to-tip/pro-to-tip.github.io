@@ -64,6 +64,12 @@ input:active, input:focus, textarea:active, textarea:focus {
     outline: transparent;
 }
 
+#rec:hover {
+    color: #E91E63;
+}
+
+
+
 .btn {
   background-color: #126178;
   border: 1px solid #549EAF;
