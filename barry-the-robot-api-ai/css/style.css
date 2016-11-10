@@ -40,7 +40,7 @@ body {
 input {
   background-color: rgba(227, 227, 227, 0.41);
   border: 0px solid #3F7F93;
-  color: #5cf863;
+  color: #5E81A8;
   font-family: "Titillium Web";
   font-size: 20px;
   font-weight:900;
@@ -51,7 +51,7 @@ input {
   border-radius:20px;
 }
 
-textarea {
+textarea {       
   background-color: #070F24;
   border: 1px solid #122435;
   color: #606B88;
@@ -62,7 +62,7 @@ textarea {
 }
 
 input:active, input:focus, textarea:active, textarea:focus {
-     border: 1px solid #5cf863;
+     border: 1px solid #5E81A8;
     outline: transparent;
 }
 
