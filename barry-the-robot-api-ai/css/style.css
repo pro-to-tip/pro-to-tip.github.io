@@ -41,8 +41,8 @@ input {
   background-color: rgba(227, 227, 227, 0.41);
   border: 0px solid #3F7F93;
   color: #5E81A8;
-  font-family: "Titillium Web";
-  font-size: 20px;
+  /*font-family: "Titillium Web";*/
+  font-size: 15px;
   font-weight:900;
   line-height: 43px;
   padding: 0 0.75em;
@@ -84,7 +84,7 @@ input:active, input:focus, textarea:active, textarea:focus {
   color: #5E81A8;
   cursor: pointer;
   display: inline-block;
-  font-family: "Titillium Web";
+ /* font-family: "Titillium Web";*/
   font-size: 20px;
   line-height: 43px;
   padding: 0 0.75em;
