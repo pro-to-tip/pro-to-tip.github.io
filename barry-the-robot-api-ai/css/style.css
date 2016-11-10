@@ -64,6 +64,12 @@ input:active, input:focus, textarea:active, textarea:focus {
     outline: transparent;
 }
 
+#speech{
+
+  color: #b2b2b2;
+
+}
+
 #rec:hover {
     color: #E91E63;
 }
