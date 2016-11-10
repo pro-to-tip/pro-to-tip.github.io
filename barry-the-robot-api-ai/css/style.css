@@ -121,7 +121,7 @@ input:active, input:focus, textarea:active, textarea:focus {
   background-color: rgba(0, 255, 10, 0.61);
 }
 
-.debug__btn:hover {
+.debug__btn:active {
   width: 100%;
   background-color:transparent;
 }
