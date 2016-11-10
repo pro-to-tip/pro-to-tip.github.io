@@ -11,6 +11,7 @@ body {
   font-family: "Titillium Web", Arial, sans-serif;
   font-size: 20px;
   margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
 }
 
 .container {
@@ -59,7 +60,8 @@ textarea {
 }
 
 input:active, input:focus, textarea:active, textarea:focus {
-  outline: 1px solid #48788B;
+     border: 1px solid #5cf863;
+    outline: transparent;
 }
 
 .btn {
