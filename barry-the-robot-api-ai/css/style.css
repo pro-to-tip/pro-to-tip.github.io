@@ -114,7 +114,7 @@ input:active, input:focus, textarea:active, textarea:focus {
 
 .debug__content.is-active {
   display: block;
-  max-height: 500px;
+  max-height: 315px;
 }
 
 .debug__btn {
