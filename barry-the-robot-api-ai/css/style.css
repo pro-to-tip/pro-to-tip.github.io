@@ -112,6 +112,7 @@ input:active, input:focus, textarea:active, textarea:focus {
 
 .spoken-response.is-active {
   max-height: 400px;
+  padding:1em;
 }
 
 .spoken-response__text {
