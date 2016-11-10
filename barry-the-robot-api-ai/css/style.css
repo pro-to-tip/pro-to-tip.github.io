@@ -133,11 +133,13 @@ input:active, input:focus, textarea:active, textarea:focus {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: all 0.35s ease-in;
+  position:absolute;
 }
 
 .spoken-response.is-active {
   max-height: 400px;
   padding:1em;
+  position:absolute;
 }
 
 .spoken-response__text {
