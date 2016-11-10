@@ -118,7 +118,8 @@ input:active, input:focus, textarea:active, textarea:focus {
 
 .debug__btn {
   width: 100%;
-  background-color: rgba(0, 255, 10, 0.61);
+  background-color:transparent;
+  /* background-color: rgba(0, 255, 10, 0.61);*/
 }
 
 .debug__btn:active {
