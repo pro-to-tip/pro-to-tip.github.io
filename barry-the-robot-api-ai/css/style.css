@@ -64,6 +64,7 @@ textarea {
 input:active, input:focus, textarea:active, textarea:focus {
      border: 1px solid #5E81A8;
     outline: transparent;
+      background: #fff;
 }
 
 #rec{
