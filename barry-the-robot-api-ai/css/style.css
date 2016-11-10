@@ -58,6 +58,7 @@ textarea {
   padding: 0.5em;
   width: 100%;
   -webkit-transition: all 0.35s ease-in;
+  background: rgba(0, 255, 10, 0.37);
 }
 
 input:active, input:focus, textarea:active, textarea:focus {
