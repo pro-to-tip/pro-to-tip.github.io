@@ -38,7 +38,7 @@ body {
 }
 
 input {
-  background-color: #fafbfc;
+  background-color: rgba(227, 227, 227, 0.41);
   border: 0px solid #3F7F93;
   color: #5cf863;
   font-family: "Titillium Web";
