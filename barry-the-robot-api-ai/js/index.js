@@ -79,7 +79,7 @@ function setInput(text) {
 }
 
 function updateRec() {
-  $recBtn.text(recognition ? "&#9209;" : "&#x23fa;");
+  $recBtn.text(recognition ? "стоп" : "старт");
 }
 function send() {
   var text = $speechInput.val();
