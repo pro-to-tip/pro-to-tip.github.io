@@ -14,7 +14,7 @@ canvas {
   height: 100%;
 }
 canvas:first-of-type {
-  background: #fff;
+  background: #edeef0;
 }
 canvas:last-of-type {
   pointer-events: none;
