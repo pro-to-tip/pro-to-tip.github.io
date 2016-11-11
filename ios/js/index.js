@@ -1,5 +1,3 @@
-/* #################
-
-Nothing to see here.
-
-################# */
+$(document).ready(function(){
+    $('body').toggle(1000);
+});
