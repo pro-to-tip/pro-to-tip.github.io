@@ -1,5 +1,5 @@
 var mySites =  [
-    "https://pro-to-tip.github.io/siri/index.html",
+    "https://pro-to-tip.github.io/Assets/horizontal-tab-menu/index.html",
     "https://appvk.github.io/index.html"
     
     ];
