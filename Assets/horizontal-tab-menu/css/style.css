@@ -236,8 +236,8 @@ ul {
 .section p:last-child {
   margin-bottom: 0;
 }
-.color1: active {
-  background: #1abc9c;
+.nav__thumb.color1:active {
+    background: #6990cb;
 }
 .color2 {
   background: #e74c3c;
