@@ -34,7 +34,7 @@ html, body {
   margin: auto;
   display: block;
   position: absolute;
-  margin-top: -175px;
+ /* margin-top: -175px;*/
   background: #fff;
   width: 130px;
   height: 75px;
