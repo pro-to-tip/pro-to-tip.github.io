@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #1a1a1a;
-  background: #1a1a1a;
+  background: transparent;
 }
 a {
   text-decoration: none;
@@ -26,7 +26,7 @@ ul {
   left: 0;
   width: 100%;
   z-index: 1;
-  background: #1a1a1a;
+  background: transparent;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
@@ -57,7 +57,7 @@ ul {
 .nav__thumb {
   display: block;
   height: 120px;
-  background: #dc143c;
+  background: transparent;
   -webkit-transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
 }
