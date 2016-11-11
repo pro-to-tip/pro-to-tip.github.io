@@ -1,0 +1,157 @@
+// ----- Personal preference -----
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  user-select: none;
+}
+
+// ----- Variable Declarations -----
+
+// ----- Styles -----
+html, body {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(250,250,250,1) 100%); 
+}
+.table {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+#ios, #android {
+  visibility: hidden;
+  position: absolute;
+}
+.button {
+  margin: auto;
+  display: block;
+  position: relative;
+  top: 50%;
+  margin-bottom: 200px;
+  margin-top: -100px;
+  background: #fff;
+  width: 130px;
+  height: 75px;
+  cursor: pointer;
+  will-change: background;
+  &.ios {
+    border-radius: 100px;
+    position: relative;
+    transition: 0s background 0.25s ease-in-out;
+    &:before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #fff;
+      content: '';
+      display: block;
+      border-radius: 100px;
+      will-change: transform;
+      box-shadow: inset 0 10px 30px rgba(black, 0.2);
+      transition: all 0.25s ease-in-out;
+      will-change: background;
+    }
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      height: 65px;
+      width: 65px;
+      top: 5px;
+      left: 5px;
+      background-color: #fff;
+      border-radius: 100px;
+      transition: all 0.25s ease-in-out;
+      transform: translateX(0px);
+      box-shadow: 0 10px 30px rgba(black, 0.2);
+    }
+    &:active {
+      &:after {
+        width: 80px;
+      }
+    }
+  }
+}
+  input[type=checkbox]:checked + label.ios {
+    background-color: #40E699;
+    transition: 0s background 0s ease-in-out;
+    &:after {
+      transform: translateX(55px);
+    }
+    &:active:after {
+      transform: translateX(40px);
+    }
+    &:before {
+      transform:  translateX(15px) scale(0.1)
+    }
+  }
+  .button.android {
+    background-color: #939393;
+    border-radius: 100px;
+    height: 50px;
+    transition: all 0.25s ease-in-out;
+    width: 120px;
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      height: 70px;
+      width: 70px;
+      margin-top: -10px;
+      margin-left: -10px;
+      top: 0px;
+      left: 0px;
+      background-color: #fff;
+      border-radius: 100px;
+      transition: all 0.25s ease-in-out;
+      box-shadow: 0 5px 15px rgba(black, 0.3);
+    }
+  }
+input[type=checkbox]:checked + label.android {
+  background-color: rgba(#009688, 0.5);
+  &:after {
+    background-color: #009688;
+    transform: translateX(70px);
+  }
+}
+// ----- Mobile styles -----
+//@media only screen 
+//  and (max-device-width: 736px) { 
+    .button.android {
+      
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 150px;
+        width: 150px;
+        margin-top: -50px;
+        margin-left: -50px;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(#939393, 0.15);
+        border-radius: 100px;
+        transition: all 0.1s ease-out;
+        transform: scale(0.01);
+        will-change: background, transform;
+      }
+      &:active:before {
+        transform: scale(1);
+      }
+    }
+    input[type=checkbox]:checked + label.android {
+      &:before {
+        background-color: rgba(#009688, 0.1);
+        transform: translateX(70px) scale(0.01);
+      }
+      &:active:before {
+        transform: translateX(70px) scale(1);
+      }
+    }
+//}
