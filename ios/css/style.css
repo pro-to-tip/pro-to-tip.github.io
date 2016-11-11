@@ -9,6 +9,8 @@
 
 html, body {
   background:#edeef0;
+  width:800;
+  height:500;
 }
 
 .table {
