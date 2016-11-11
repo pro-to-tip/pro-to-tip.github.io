@@ -2,7 +2,7 @@ $(document).ready(function(){
   
   //ajax
   function loadMe(){
-    $.get( 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/242749/loadMe.html', function(data) {
+    $.get( 'https://pro-to-tip.github.io/siri/index.html', function(data) {
     $('.content').html(data);});
     $('.load').hide();
   };
