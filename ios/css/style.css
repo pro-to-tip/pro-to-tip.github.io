@@ -33,7 +33,7 @@ html, body {
 .button {
   margin: auto;
   display: block;
-  position: relative;
+  position: absolute;
   margin-top: -175px;
   background: #fff;
   width: 130px;
@@ -43,7 +43,6 @@ html, body {
 }
 .button.ios {
   border-radius: 100px;
-  position: relative;
   -webkit-transition: 0s background 0.25s ease-in-out;
   transition: 0s background 0.25s ease-in-out;
 }
