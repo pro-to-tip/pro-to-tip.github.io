@@ -239,8 +239,8 @@ ul {
 .nav__thumb.color1:active {
     background: #6990cb;
 }
-.color2 {
-  background: #e74c3c;
+.nav__thumb.color2:active {
+    background: #6990cb;
 }
 .color3 {
   background: #3498db;
