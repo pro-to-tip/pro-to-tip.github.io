@@ -22,9 +22,9 @@ ul {
 }
 .nav {
   will-change: transform;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 5%;
   width: 77%;
   z-index: 1;
   background: transparent;
