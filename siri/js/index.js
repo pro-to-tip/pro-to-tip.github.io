@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('body').toggle(1000);
+});
+
 // ----- On render -----
 $(function() {
   document.title = "New Tab"
