@@ -214,7 +214,7 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 15vh;
+  font-size: 13vh;
   text-transform: uppercase;
   opacity: 0.15;
   z-index: -1;
