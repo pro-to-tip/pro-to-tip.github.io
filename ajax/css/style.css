@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300);
+body {
+  background-color: #2d2d2d;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+}
+
+.center, .content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.load, .content .reset {
+  border: 4px solid #e13b3b;
+  font-size: 1.2em;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  padding: .8em 1.5em;
+  border-radius: 0;
+  transition: all 500ms;
+}
+.load:hover, .content .reset:hover {
+  padding: .9em 1.75em;
+  background-color: rgba(225, 59, 59, 0.18);
+}
+
+.bar {
+  width: 155px;
+  height: 3px;
+  padding: 0;
+  background-color: rgba(225, 59, 59, 0.7);
+  border: none;
+}
+.bar .loader {
+  width: 20px;
+  height: 3px;
+  background-image: linear-gradient(to right, rgba(250, 250, 250, 0.3), #fff);
+  animation: slide infinite .75s linear;
+}
+.bar:hover {
+  padding: 0;
+  background-color: rgba(225, 59, 59, 0.7);
+}
+
+@keyframes slide {
+  from {
+    margin-left: -20px;
+  }
+  to {
+    margin-left: 135px;
+  }
+}
+.content h1 {
+  text-align: center;
+  font-size: 1.6em;
+}
+.content .reset {
+  text-align: center;
+  margin-top: 1em;
+}
