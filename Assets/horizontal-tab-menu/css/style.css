@@ -242,17 +242,17 @@ ul {
 .nav__thumb.color2:active {
     background: #6990cb;
 }
-.color3 {
-  background: #3498db;
+.nav__thumb.color3:active {
+    background: #6990cb;
 }
-.color4 {
-  background: #f4d03f;
+.nav__thumb.color4:active {
+    background: #6990cb;
 }
-.color5 {
-  background: #9b59b6;
+.nav__thumb.color5:active {
+    background: #6990cb;
 }
-.color6 {
-  background: #bdc3c7;
+.nav__thumb.color6:active {
+    background: #6990cb;
 }
 .logo {
   position: fixed;
