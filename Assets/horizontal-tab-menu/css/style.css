@@ -69,7 +69,7 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 70px;
+      font-size: 23px;
   text-transform: uppercase;
   opacity: 0.15;
 }
