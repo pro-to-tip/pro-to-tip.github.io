@@ -1,154 +1,21 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Пример</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-    <link href="https://yandex.st/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <script src="https://yandex.st/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js" type="text/javascript"></script>
-    <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-    <script src="https://dimik.github.io/ymaps/examples/delivery-calculator/multi-geocoder.js" type="text/javascript"></script>
-    <script src="https://dimik.github.io/ymaps/examples/delivery-calculator/delivery-calculator.js" type="text/javascript"></script>
-    <script src="https://dimik.github.io/ymaps/examples/delivery-calculator/directions-renderer.js" type="text/javascript"></script>
-    <script src="https://dimik.github.io/ymaps/examples/delivery-calculator/directions-service.js" type="text/javascript"></script>
-    <script src="https://dimik.github.io/ymaps/examples/delivery-calculator/delivery-tarif.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-function init() {
-    var myMap = window.map = new ymaps.Map('YMapsID', {
-            center: [55.751574, 37.573856],
-            zoom: 9,
-            behaviors: ['drag', 'scrollZoom']
-        }),
-        searchOrigin = new ymaps.control.SearchControl({
-            useMapBounds: true,
-            noCentering: true,
-            noPlacemark: true
-        }),
-        searchDestination = new ymaps.control.SearchControl({
-            useMapBounds: true,
-            noCentering: true,
-            noPlacemark: true
-        }),
-        tarifs = [{
-            id: 'moscow',
-            name: 'Москва',
-            label: 'Маршрут по Москве',
-            color: '#0000ff',
-            cost: 20,
-            url: 'moscow.json'
-        }, {
-            id: 'mo',
-            name: 'Московская область',
-            label: 'Маршрут за МКАД',
-            cost: 40,
-            color: '#ff0000',
-            url: 'mo.json'
-        }],
-        calculator = new DeliveryCalculator(myMap, 'Москва, Льва Толстого 18', tarifs);
-
-    myMap.controls.add(searchOrigin, { right: 5, top: 5 });
-    myMap.controls.add(searchDestination, { right: 5, top: 45 });
-
-    searchOrigin.events.add('resultselect', function (e) {
-        var results = searchOrigin.getResultsArray(),
-            selected = e.get('resultIndex'),
-            point = results[selected].geometry.getCoordinates();
-
-            calculator.setOrigin(point);
-    });
-
-    searchDestination.events.add('resultselect', function (e) {
-        var results = searchDestination.getResultsArray(),
-            selected = e.get('resultIndex'),
-            point = results[selected].geometry.getCoordinates();
-
-            calculator.setDestination(point);
-    });
-
-    myMap.events.add('click', function (e) {
-        var position = e.get('coordPosition');
-
-        if(calculator.getOrigin()) {
-            calculator.setDestination(position);
-        }
-        else {
-            calculator.setOrigin(position);
-        }
-    });
-}
-
-ymaps.ready(init);
-
-</script>
-    <style type="text/css">
-        #YMapsID {
-            width: 800px;
-            height: 520px;
-        }
-        .hero-unit {
-            background-color: #FFF;
-        }
-        .well {
-            padding: 15px 0;
-            height: 520px;
-        }
-        .label {
-            cursor: pointer;
-        }
-        #sidebar {
-            height: 520px;
-            overflow: scroll;
-        }
-       .table tbody tr {
-            cursor: pointer;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Примеры. Расчет стоимости доставки</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="DeliveryCalculatorClass.js" type="text/javascript"></script>
+    <script src="deliveryCalculator.js" type="text/javascript"></script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
         }
     </style>
-    <!-- Шаблон содержимого сайдбара. -->
-    <script id="sidebarTemplate" type="text/x-jquery-tmpl">
-        <table class="table table-hover table-striped table-bordered table-condensed">
-            <thead>
-                <tr>
-                    <th>Тариф</th>
-                    <th>Длина маршрута</th>
-                    <th>Стоимость доставки</th>
-                </tr>
-            </thead>
-            <tbody>
-            {{each(i, tarif) results}}
-                {{tmpl({
-                    i: i,
-                    tarif: tarif
-                }, {
-                    formatter: $item.formatter
-                }) "#rowTemplate"}}
-            {{/each}}
-            </tbody>
-        </table>
-    </script>
-    <!-- Шаблон тарифа в таблице. -->
-    <script id="rowTemplate" type="text/x-jquery-tmpl">
-        <tr id="${tarif.id}">
-            <td>${tarif.name}</td>
-            <td>${$item.formatter.distance(tarif.distance)}</td>
-            <td>${tarif.value} руб</td>
-        </tr>
-    </script>
 </head>
 <body>
-    <div class="hero-unit">
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span12">
-                    <p class="lead"></p>
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div id="YMapsID" class="span8"></div>
-                <div id="sidebar" class="span4"></div>
-            </div>
-        </div>
-    </div>
+    <div id="map"></div>
 </body>
 </html>
