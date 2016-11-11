@@ -191,7 +191,7 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background: #fff;
+  background: #edeef0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
