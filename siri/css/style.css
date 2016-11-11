@@ -111,8 +111,8 @@ body {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background: rgb(233, 234, 243);
-  top:12.8%;
-  left:49%;
+  top:13%;
+  left:49.5%;
 }
 
  /*
@@ -143,7 +143,7 @@ body {
   height: 50px;
   border-radius: 100%;
   bottom: 215px;
-  left: 49%;
+  left: 49.5%;
   margin-left: -25px;
   position: absolute;
   z-index: 5;
