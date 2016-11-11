@@ -236,7 +236,7 @@ ul {
 .section p:last-child {
   margin-bottom: 0;
 }
-.color1 {
+.color1: active {
   background: #1abc9c;
 }
 .color2 {
