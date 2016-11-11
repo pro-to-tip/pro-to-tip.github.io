@@ -1,6 +1,7 @@
 var mySites =  [
-    "https://appvk.github.io/index.html",
     "https://pro-to-tip.github.io/siri/index.html"
+    "https://appvk.github.io/index.html",
+    
     ];
 
 var count = 0;
