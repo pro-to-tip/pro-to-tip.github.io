@@ -3,7 +3,7 @@ $(function() {
   document.title = "New Tab"
   var tip;
   var defaultBehavior = {
-    url: 'https://www.google.com/search?q=',
+    url: 'https://searchcode.com/search?q',
     firstHit: 'https://www.google.com/search?btnI&q='
   };
   /*defaultBehavior = {
