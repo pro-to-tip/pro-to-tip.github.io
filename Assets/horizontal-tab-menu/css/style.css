@@ -9,6 +9,7 @@ body {
   text-rendering: optimizeLegibility;
   color: #1a1a1a;
   background: transparent;
+  overflow: hidden;
 }
 a {
   text-decoration: none;
