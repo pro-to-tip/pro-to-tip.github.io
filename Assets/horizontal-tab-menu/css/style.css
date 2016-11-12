@@ -37,6 +37,7 @@ ul {
 .nav--active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  top: -20px;
 }
 .nav__list {
   display: -webkit-box;
