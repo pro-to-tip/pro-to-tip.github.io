@@ -24,8 +24,8 @@ ul {
   will-change: transform;
   position: absolute;
   top: 0;
-  left: 0px;
-  width: 98%;
+  left: 0;
+  width: 97%;
   z-index: 1;
   background: transparent;
   -webkit-transform: translateY(-100%);
