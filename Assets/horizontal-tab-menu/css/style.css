@@ -241,28 +241,23 @@ ul {
   margin-bottom: 0;
 }
 .nav__thumb.color1:hover {
-    background: #5e81a8;
-  border-radius: 100px;
+    background: #d1d9e0;
    color:#fff;
 }
 .nav__thumb.color2:hover {
-    background: #5e81a8;
-  border-radius: 100px;
+    background: #d1d9e0; 
   color:#fff;
 }
 .nav__thumb.color3:hover {
-    background: #5e81a8;
-  border-radius: 100px;
+    background: #d1d9e0;
   color:#fff;
 }
 .nav__thumb.color4:hover {
-    background: #5e81a8;
-  border-radius: 100px;
+    background: #d1d9e0;
   color:#fff;
 }
 .nav__thumb.color5:hover {
-    background: #5e81a8;
-  border-radius: 100px;
+    background:#d1d9e0;
   color:#fff;
 }
 /*.nav__thumb.color6:hover {
