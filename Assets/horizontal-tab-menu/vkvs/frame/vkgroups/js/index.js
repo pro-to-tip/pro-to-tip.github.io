@@ -7,7 +7,7 @@ $(function() {
   document.title = "New Tab"
   var tip;
   var defaultBehavior = {
-    url: 'https://vk.com/groups?q=',
+    url: 'https://vk.com/groups?act=catalog&c%5Bq%5D=',
     firstHit: 'https://www.google.com/search?btnI&q='
   };
   /*defaultBehavior = {
