@@ -245,22 +245,27 @@ ul {
 .nav__thumb.color2:hover {
     background: #5e81a8;
   border-radius: 100px;
+  color:#fff;
 }
 .nav__thumb.color3:hover {
     background: #5e81a8;
   border-radius: 100px;
+  color:#fff;
 }
 .nav__thumb.color4:hover {
     background: #5e81a8;
   border-radius: 100px;
+  color:#fff;
 }
 .nav__thumb.color5:hover {
     background: #5e81a8;
   border-radius: 100px;
+  color:#fff;
 }
-.nav__thumb.color6:hover {
+/*.nav__thumb.color6:hover {
     background: #5e81a8;
   border-radius: 100px;
+  color:#fff;*/
 }
 .logo {
   position: fixed;
