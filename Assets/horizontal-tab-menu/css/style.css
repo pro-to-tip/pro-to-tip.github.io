@@ -10,6 +10,7 @@ body {
   color: #5e81a8;
   background: #edeef0;
   overflow: hidden;
+  font-weight: 900;
 }
 a {
   text-decoration: none;
