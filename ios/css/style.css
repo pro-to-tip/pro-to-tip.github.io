@@ -46,7 +46,7 @@ html, body {
   -webkit-transition: 0s background 0.25s ease-in-out;
   transition: 0s background 0.25s ease-in-out;
   top: 5%;
-  left: 80%;
+  left: 83%;
 }
 .button.ios:before {
   position: absolute;
