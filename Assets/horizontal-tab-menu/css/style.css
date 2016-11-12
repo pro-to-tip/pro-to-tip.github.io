@@ -272,7 +272,7 @@ ul {
   top: 195px;
   right: 7px;
   z-index: 2;
-  opacity: 0;
+  opacity: 0.9;
 }
 @media (max-width: 720px) {
   .logo {
