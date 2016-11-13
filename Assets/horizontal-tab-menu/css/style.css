@@ -244,26 +244,31 @@ ul {
     background: #d1d9e0;
    color:#fff;
   height:60%;
+  border-radius: 20px;
 }
 .nav__thumb.color2:hover {
     background: #d1d9e0; 
   color:#fff;
    height:60%;
+      border-radius: 20px;
 }
 .nav__thumb.color3:hover {
     background: #d1d9e0;
   color:#fff;
   height:60%;
+      border-radius: 20px;
 }
 .nav__thumb.color4:hover {
     background: #d1d9e0;
   color:#fff;
    height:60%;
+      border-radius: 20px;
 }
 .nav__thumb.color5:hover {
     background:#d1d9e0;
   color:#fff;
   height:60%;
+      border-radius: 20px;
 }
 /*.nav__thumb.color6:hover {
     background: #5e81a8;
