@@ -45,7 +45,7 @@ function printAddress(latitude, longitude, isMaxMind) {
  
   // if we used MaxMind for location, add attribution link
   if(isMaxMind) {
-    $('body').append('<p><a href="http://www.maxmind.com" target="_blank">IP to Location Service Provided by MaxMind</a></p>');
+    $('body').append('<p><a href="https://www.maxmind.com" target="_blank">IP to Location Service Provided by MaxMind</a></p>');
   }
 }
  
