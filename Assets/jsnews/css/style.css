@@ -30,7 +30,7 @@ canvas {
 
 .effects {
   z-index: 100;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAQAAAD41K0JAAAADklEQVQI12Ng+A+EQAQADfsC/pD7Z48AAAAASUVORK5CYII=);
+ /* background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAQAAAD41K0JAAAADklEQVQI12Ng+A+EQAQADfsC/pD7Z48AAAAASUVORK5CYII=);*/
   background-repeat: repeat;
   opacity: 0.1;
   pointer-events: none;
