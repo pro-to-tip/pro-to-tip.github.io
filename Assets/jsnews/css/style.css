@@ -34,6 +34,7 @@ canvas {
   background-repeat: repeat;
   opacity: 0.1;
   pointer-events: none;
+  opacity:0.5;
 }
 
 .overlays {
