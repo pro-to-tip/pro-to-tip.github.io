@@ -125,7 +125,7 @@ function renderText() {
 
 function getNewPosts() {
 		fetchrunning = true;
-		var req = 'http://www.reddit.com/r/' + subreddits.join('+') + '/hot/.json?limit=' + fetchAtOnce;
+		var req = 'https://www.reddit.com/r/' + subreddits.join('+') + '/hot/.json?limit=' + fetchAtOnce;
 		if (lastpost !== undefined && lastpost.length > 0) {
 				req += '&after=t3_' + lastpost;
 		}
