@@ -125,7 +125,7 @@ function renderText() {
 
 function getNewPosts() {
 		fetchrunning = true;
-		var req = 'https://www.reddit.com/r/' + subreddits.join('+') + '/hot/.json?limit=' + fetchAtOnce;
+		var req = 'http://www.reddit.com/r/' + subreddits.join('+') + '/hot/.json?limit=' + fetchAtOnce;
 		if (lastpost !== undefined && lastpost.length > 0) {
 				req += '&after=t3_' + lastpost;
 		}
@@ -199,7 +199,7 @@ $(document).ready(function() {
 				isActive = true;
 		}, 3000);
 });
-//
-//$('body').one('click', function() {
-//		errorthrown = true;
-//});
+
+$('body').one('click', function() {
+		errorthrown = true;
+});
