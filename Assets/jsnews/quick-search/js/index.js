@@ -97,7 +97,7 @@ function setResult(result) {
 		resultsElements.source.href = '';
 	}
 	
-	resultsElements.attribution.href = 'https://duckduckgo.com/?q=' + encodeURIComponent(result.query);
+	resultsElements.attribution.href = 'https://google.com/?q=' + encodeURIComponent(result.query);
 
 	if (result.dataTable && result.dataTable.length !== 0) {
 		resultsElements.table.classList.remove(hiddenClass);
