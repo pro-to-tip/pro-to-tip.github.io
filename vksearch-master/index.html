@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<title>Поиск на стене вконтакте</title>
+    <script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" href="http://swey.biz/css/style.css"/>
+	<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+	<section style="margin-top: 20px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="input-group">
+						<input type="text" class="form-control" id="inputUser" placeholder="Ссылку на пользователя или сообщество...">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-info" onclick="newUrl();"><span class="glyphicon glyphicon-plus"></span></button>
+						</span>
+					</div>
+					<div id="error"></div>
+					<div class="contacts-widget" style="margin-top: 20px;">
+						<div class="widget-body 300-scroll">
+							<ul class="list-unstyled">
+								<li class="contact-alpha">
+									Где будем искать?
+									<div class="clearfix"></div>
+								</li>
+							</ul>
+							<ul class="list-unstyled" id="profiles">
+								<div class="errorL" id="errorL">Укажите профиль пользователя или сообщесва!</div>
+							</ul>
+						</div>
+						<div class="widget-foot"></div>
+					</div>
+				</div>	
+				<div class="col-md-6">
+					<div class="input-group">
+						<input type="text" class="form-control" id="inputQuery" placeholder="Что ищем..."/>
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-info" onclick="query();"><span class="glyphicon glyphicon-search"></span></button>
+						</span>
+					</div>
+					<div class="alert"><input type="checkbox" id="owners_only"> Искать только в записях от имени владельца стены.</div>
+					<div class="contacts-widget" style="margin-top: 20px;">
+						<div class="widget-body">
+							<ul class="list-unstyled">
+								<li class="contact-alpha">
+									Найденные записи <span class="label label-info pull-right"><span id="resultCount">0</span> Найденных записей</span>
+									<div class="clearfix"></div>
+								</li>
+								<ul class="list-unstyled" id="result">
+									
+								</ul>
+							</ul>
+						</div>
+						<div class="widget-foot"></div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</section>
+    <script>
+var id_app = [2866099, 4195289, 4195287, 4195284, 4161477, 4161462, 4149350, 4149349, 4149336, 2394133, 3043953];
+var apiID_index = Math.floor(Math.random() * (id_app.length));
+VK.init({
+    apiId: id_app[apiID_index]
+});
+var id;
+
+function query() {
+	var query_ = document.getElementById('inputQuery').value;
+	var setting = 0;
+	if (document.getElementById('owners_only').checked)
+		setting = 1;
+		
+	VK.Api.call('wall.search', {owner_id: id, v: '5.27', query: query_, owners_only: setting, count: 30}, function(r) {
+		if(r.response) {
+			$('#resultCount').html(r.response.count);
+			if (r.response.count > 0)
+			{
+				$('#result').html('');
+				for (var i=0; i<r.response.count; i++)
+				{
+					$('#result').append(''
+								+ '<li class="c-list user' + r.response.items[i].id + ' pulse animated">'
+									+ '<div class="contact-details">'
+										+ '<div class="pull-left">'
+											+ '<strong>' + r.response.items[i].text.substr(0,40) + '...</strong>'
+											+ '<small><span class="glyphicon glyphicon-heart"></span> ' + r.response.items[i].likes.count + ' <span class="glyphicon glyphicon-bullhorn"></span> ' + r.response.items[i].reposts.count + ' <span class="glyphicon glyphicon-comment"></span> ' + r.response.items[i].comments.count + '</small>'
+										+ '</div>'
+										+ '<div class="pull-right">'
+											+ '<a href="http://vk.com/wall' + id + '_' + r.response.items[i].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-link"></span></a>'
+										+ '</div>'
+										+ '<div class="clearfix"></div>'
+									+ '</div>'
+								+ '</li>');
+				}
+			} else
+				writeErrorResult('Записей не найдено!');
+		}
+	});
+}
+
+function newUrl() {
+	var user_id = document.getElementById('inputUser').value;
+	if (user_id.indexOf("com/") >= 0)
+		user_id = user_id.split('com/')[1];
+	VK.Api.call('utils.resolveScreenName', {screen_name: user_id, v: '5.27'}, function(r) {
+		if(r.response) {
+			if (r.response.type == 'user') {
+				addUser(user_id);
+			} else {
+				if (r.response.type == 'group') {
+					addGroup(user_id);
+				} else {
+					writeError('Неверно указана ссылка!');
+				}
+			}
+		}
+	});	
+}
+
+function addGroup(user_id) {
+	$('#error').html('');
+	VK.Api.call('groups.getById', {group_id: user_id, fields: 'photo_50', v: '5.27'}, function(r) {
+			if(r.response) {
+					id = '-' + r.response[0].id;
+					$('#profiles').html(''
+								+ '<li class="c-list user' + r.response[0].id + ' pulse animated">'
+									+ '<div class="contact-pic">'
+										+ '<a href="#"><img src="' + r.response[0].photo_50 + '" alt="" class="img-responsive"/></a>'
+									+ '</div>'
+									+ '<div class="contact-details">'
+										+ '<div class="pull-left">'
+											+ '<strong>' + r.response[0].name + '</strong>'
+											+ '<small>CLUB' + r.response[0].id + '</small>'
+										+ '</div>'
+										+ '<div class="pull-right">'
+											+ '<a href="http://vk.com/club' + r.response[0].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-link"></span></a>'
+										+ '</div>'
+										+ '<div class="clearfix"></div>'
+									+ '</div>'
+								+ '</li>');
+			} else {
+				writeError('Неверно указана ссылка!');
+			}
+	});
+}
+
+function addUser(user_id) {
+	$('#error').html('');
+	VK.Api.call('users.get', {user_ids: user_id, fields: 'photo_50,domain', v: '5.27'}, function(r) {
+			if(r.response) {
+					id = r.response[0].id;
+					$('#profiles').html(''
+								+ '<li class="c-list user' + r.response[0].id + ' pulse animated">'
+									+ '<div class="contact-pic">'
+										+ '<a href="#"><img src="' + r.response[0].photo_50 + '" alt="" class="img-responsive"/></a>'
+									+ '</div>'
+									+ '<div class="contact-details">'
+										+ '<div class="pull-left">'
+											+ '<strong>' + r.response[0].first_name + ' ' + r.response[0].last_name + '</strong>'
+											+ '<small>CLUB' + r.response[0].id + '</small>'
+										+ '</div>'
+										+ '<div class="pull-right">'
+											+ '<a href="http://vk.com/id' + id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-link"></span></a>'
+										+ '</div>'
+										+ '<div class="clearfix"></div>'
+									+ '</div>'
+								+ '</li>');
+								alert(id + ' ' + type);
+			} else {
+				writeError('Неверно указана ссылка!');
+			}
+	});
+}
+
+function writeError(error) {
+	$('#error').html('<b>Ошибка!</b> ' + error);
+}
+function writeErrorResult(error) {
+	$('#result').html('<div class="errorL"><b>Ошибка!</b> ' + error + '</div>');
+}
+
+
+	</script>
+    </body>
+</html>
