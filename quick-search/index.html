@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+<div class="container">
+  <form id="search" class="search">
+    <input id="search-input" type="text" placeholder="What do you want to learn about?" class="search__input"/>
+    <button id="search-button" class="search__button"><svg xmlns="http://www.w3.org/2000/svg" width="32.01" height="32.01" viewBox="0 0 32 32"><g fill="none" class="icon"><path id="search-icon-line" d="M22.47 22.472l9.176 9.176"/><path id="search-icon-circle" d="M26.293 13.396c0 7.123-5.774 12.896-12.897 12.896C6.274 26.292.5 20.52.5 13.396.5 6.274 6.274.5 13.396.5c7.123 0 12.897 5.774 12.897 12.896z"/></g></svg></button>
+  </form>
+  <section id="result" class="result result--no-image loading">
+    <div class="result__overview">
+      <h1>JavaScript</h1>
+      <p class="result__description">JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification. Alongside HTML and CSS, it is one of the three essential technologies of World Wide Web content production; the majority of websites employ it and it is supported by all modern web browsers without plug-ins. JavaScript is prototype-based with first-class functions, making it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles. It has an API for working with text, arrays, dates and regular expressions, but does not include any I/O, such as networking, storage or graphics facilities, relying for these upon the host environment in which it is embedded.</p>
+    </div>
+    <div class="result__image-container"><img src="" class="result__image"/></div>
+    <table class="result__table table"></table>
+    <div class="result__links"><a href="#" class="result__attribution">Results from DuckDuckGo</a><a href="#" class="result__source hidden"></a></div>
+  </section>
+</div>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
