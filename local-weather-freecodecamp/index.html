@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Local Weather - FreeCodeCamp</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  	<html>
+	<head>
+		<title>Local Weather - FreeCodeCamp</title>
+		<script src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="LocalWeather.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://erikflowers.github.io/weather-icons/css/weather-icons.css">
+		<link rel="stylesheet" type="text/css" href="https://erikflowers.github.io/weather-icons/css/weather-icons-wind.css">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="LocalWeather.css">
+	</head>
+	<body>
+		<div id="wrapper">			
+			<div id="widget">				
+				<div id="title">Current Temp</div>
+				<div id="source"></div>
+				<div id="temp">
+					<span id="currentTemp" class="temp"></span>
+					<span id="icon" class="temp"></span>
+				</div>
+				<div id="textCondition"></div>				
+				<div id="description">
+					<div id="maxMin">
+						<div id="tempMin"></div>
+						<div id="tempMax"></div>						
+					</div><br />																							
+					<div class="descLeft">wind: </div><div id="wind" class="descRight">-</div>					
+					<div class="descLeft">humidity: </div><div id="humidity" class="descRight">-</div>					
+					<div class="descLeft">pressure: </div><div id="pressure" class="descRight">-</div>					
+					<div class="descLeft">visibility: </div><div id="visibility" class="descRight">-</div>													
+					<div class="descLeft">sunrise: </div><div id="sunrise" class="descRight">-</div>													
+					<div class="descLeft">sunset: </div><div id="sunset" class="descRight">-</div>													
+				</div>
+				<div id="typeUnits">
+				System:
+					<span><input type="button" id="btnMetric" class="btnUnits" value="metric"></span>
+					<span><input type="button" id="btnImperial" class="btnUnits" value="imperial"></span>
+				</div>
+			</div>
+			<div id="lastUpdateDiv">
+				<span>Last update: </span><span id="lastUpdate"></span>
+			</div>
+			<div id="map"></div>
+		</div>
+	</body>
+	</html>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
