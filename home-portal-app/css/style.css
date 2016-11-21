@@ -172,6 +172,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   background-color: initial;
+  font-weight: 900;
 }
 .page-home .panel-calendar ul {
   padding: 0px 20px;
@@ -208,6 +209,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   background-color: initial;
+  font-weight: 900;
 }
 .page-home .panel-tasks ul {
   padding-right: 30px;
