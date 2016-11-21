@@ -273,9 +273,17 @@ body {
     -moz-border-radius: 87px;
     -webkit-border-radius: 87px;
     border-radius: 87px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+  
     /* color: #99b1c6; */
 }
+
+.page-home .panel-functions .icon:hover{
+box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
 .page-home .panel-functions .icon .title {
   font-size: 1.0rem;
   text-align: center;
