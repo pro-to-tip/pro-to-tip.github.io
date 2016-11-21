@@ -104,7 +104,8 @@ body {
   line-height: 8.0rem;
   /*text-align: center;*/
    position: relative;
-   bottom: 2vw;
+   bottom: 1.3vw;
+   left: 5vw;
 }
 .page-home .panel-time .date {
   background-color: #5E81A8;
