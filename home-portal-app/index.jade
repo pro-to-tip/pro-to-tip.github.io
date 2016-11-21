@@ -1,0 +1,476 @@
+.page.page-home(style="display:block")
+	.bg
+	.overlay
+	.panel.panel-time
+		.span.time 15:06
+		.span.date Monday, 27 Juny 2015
+		
+	.panel.panel-weather
+		.location Budapest, Hungary
+		//.icon.wi.wi-day-sunny-overcast
+		img(src="http://ultraimg.com/images/KlfpUAu.png")
+		.span.temp 28
+			span.degree &deg;C
+		.span.text Sunny
+		
+	.panel.panel-calendar
+		ul
+			li
+				.time 8:00 - 9:00
+				.title Shopping
+			li
+				.time 10:00 - 12:00
+				.title Meet Tom
+			li
+				.time 18:00 - 20:00
+				.title Go to cinema
+		
+	.panel.panel-tasks
+		ul
+			li.checked
+				.check
+				.title Milk
+			li
+				.check
+				.title Bread & cheese
+			li
+				.check
+				.title Beer & wine
+			li.other
+				.plus
+				.title ... and 15 other tasks
+				
+				
+	.panel.panel-functions
+		.icon.icon-weather(data-page="weather")
+			i.fa.fa-sun-o
+			span.title Weather
+		.icon.icon-calendar(data-page="calendar")
+			i.fa.fa-calendar
+			span.title Calendar
+		.icon.icon-map(data-page="map")
+			i.fa.fa-globe
+			span.title Map
+		.icon.icon-tasks(data-page="tasks")
+			i.fa.fa-tasks
+			span.title Tasks
+		.icon.icon-news(data-page="news")
+			i.fa.fa-rss
+			span.title News
+		
+		
+		
+.page.page-weather
+	.bg
+	.overlay
+
+	.panel.panel-now
+		.mainInfo
+			//.icon.wi.wi-day-sunny
+			img(src="http://ultraimg.com/images/KlfpUAu.png")
+			.temp
+				span.value 27
+					span.degree &deg;C
+				span.separator /
+				span.value 19
+					span.degree &deg;C
+
+		.row
+			.info
+				i.wi.wi-strong-wind
+				span.value 15 km/h
+			.info
+				i.wi.wi-wind-default._150-deg
+				span.value NW
+			.info
+				i.wi.wi-sprinkles
+				span.value 40 %					
+
+	.panel.panel-today
+		.box
+			.title Morning
+			//.icon.wi.wi-day-rain
+			img(src="http://ultraimg.com/images/Paf07R1.png")
+			.temp
+				span.value 16
+					span.degree &deg;C
+		.box
+			.title Afternoon
+			//.icon.wi.wi-day-rain
+			img(src="http://ultraimg.com/images/KlfpUAu.png")
+			.temp
+				span.value 26
+					span.degree &deg;C
+		.box
+			.title Tonight
+			//.icon.wi.wi-day-rain
+			img(src="http://ultraimg.com/images/NDKiHOg.png")
+			.temp
+				span.value 19
+					span.degree &deg;C
+
+	.panel.panel-location
+		.title 
+			span Budapest
+			span Hungary
+		.icon.fa.fa-map-marker
+		
+	.panel.panel-forecast
+		.box
+			.title Tue
+			//.icon.wi.wi-day-rain
+			img(src="http://ultraimg.com/images/bosikG0.png")
+			.temp
+				span.value 31
+					span.degree &deg;C
+				span.separator /
+				span.value 23
+					span.degree &deg;C
+		.box
+			.title Wed
+			img(src="http://ultraimg.com/images/KlfpUAu.png")
+			.temp
+				span.value 25
+					span.degree &deg;C
+				span.separator /
+				span.value 20
+					span.degree &deg;C
+		.box
+			.title Thu
+			img(src="http://ultraimg.com/images/t8VL5lw.png")
+			.temp
+				span.value 18
+					span.degree &deg;C
+				span.separator /
+				span.value 12
+					span.degree &deg;C
+		.box
+			.title Fri
+			img(src="http://ultraimg.com/images/t8VL5lw.png")
+			.temp
+				span.value 16
+					span.degree &deg;C
+				span.separator /
+				span.value 9
+					span.degree &deg;C
+		.box
+			.title Sat
+			img(src="http://ultraimg.com/images/Paf07R1.png")
+			.temp
+				span.value 20
+					span.degree &deg;C
+				span.separator /
+				span.value 13
+					span.degree &deg;C
+		.box
+			.title Sun
+			img(src="http://ultraimg.com/images/bosikG0.png")
+			.temp
+				span.value 26
+					span.degree &deg;C
+				span.separator /
+				span.value 22
+					span.degree &deg;C
+		
+.page.page-calendar
+	.bg
+	.overlay
+	.panel.panel-calendar.left
+		.header
+			.title Today
+			.date Juny 25, 2015
+		ul
+			li
+				.time 8:00 - 9:00
+				.title Shopping
+			li
+				.time 10:00 - 12:00
+				.title Meet Tom
+			li
+				.time 18:00 - 20:00
+				.title Go to cinema
+			li
+				.time 23:00 - 24:00
+				.title Drinking
+				
+	.panel.panel-calendar.right
+		.header
+			.title Tomorrow
+			.date Juny 26, 2015
+		ul
+			li
+				.time 9:00 - 10:00
+				.title Meeting
+			li
+				.time 11:00 - 13:00
+				.title Go to bank
+			li
+				.time 16:00 - 17:00
+				.title Dinner
+			li
+				.time 22:00 - 24:00
+				.title Party	
+		
+.page.page-map
+	.bg
+	.overlay
+	.title Traffic map
+	.map
+		
+.page.page-tasks
+	.bg
+	.overlay
+	.wrapper
+		.panel.panel-tasklist
+			.header
+				.title Shopping list (4)
+			.newItem
+				.text
+					i.fa.fa-plus
+					span.title Add new item
+				input(type="text", placeholder="Add new item")
+			ul
+				li.checked
+					.check
+					.title Milk
+				li
+					.check
+					.title Bread
+				li
+					.check
+					.title Cheese
+				li
+					.check
+					.title Beer
+
+		.panel.panel-tasklist
+			.header
+				.title To-do list (5)
+			.newItem
+				.text
+					i.fa.fa-plus
+					span.title Add new item
+				input(type="text", placeholder="Add new item")
+			ul
+				li
+					.check
+					.title Cleaning
+				li
+					.check
+					.title Washing
+				li
+					.check
+					.title Shopping
+				li.checked
+					.check
+					.title Pay bills
+				li
+					.check
+					.title Dusting
+
+		.panel.panel-tasklist
+			.header
+				.title Long-term tasks (3)
+			.newItem
+				.text
+					i.fa.fa-plus
+					span.title Add new item
+				input(type="text", placeholder="Add new item")
+			ul
+				li
+					.check
+					.title Prepare boiler
+				li
+					.check
+					.title Buy a sofa
+				li
+					.check
+					.title Car service
+				
+.page.page-news
+	.bg
+	.overlay
+		.panel.panel-newslist-big		
+			ul
+				li
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						.source CNET
+						.time June 26, 2015 7:12 PM
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+		
+				li
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+						.source Forbes
+						.time June 26, 2015 6:01 PM
+						
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+
+
+				li
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						.source CNET
+						.time June 26, 2015 7:12 PM
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+		
+				li
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+						.source Forbes
+						.time June 26, 2015 6:01 PM
+						
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+				li
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						.source CNET
+						.time June 26, 2015 7:12 PM
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+		
+				li
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+						.source Forbes
+						.time June 26, 2015 6:01 PM
+						
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+				li
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						.source CNET
+						.time June 26, 2015 7:12 PM
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+		
+				li
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+						.source Forbes
+						.time June 26, 2015 6:01 PM
+						
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+				li
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						.source CNET
+						.time June 26, 2015 7:12 PM
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+		
+				li
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+						.source Forbes
+						.time June 26, 2015 6:01 PM
+						
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+				li
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						.source CNET
+						.time June 26, 2015 7:12 PM
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+		
+				li
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+						.source Forbes
+						.time June 26, 2015 6:01 PM
+						
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+
+
+		.panel.panel-newslist-small		
+			ul
+				li
+					.source CNET
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+					.time June 26, 2015 7:12 PM
+		
+				li
+					.source Forbes
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+					.time June 26, 2015 6:01 PM
+
+
+				li
+					.source CNET
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+					.time June 26, 2015 7:12 PM
+		
+				li
+					.source Forbes
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+					.time June 26, 2015 6:01 PM
+				li
+					.source CNET
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+					.time June 26, 2015 7:12 PM
+		
+				li
+					.source Forbes
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+					.time June 26, 2015 6:01 PM
+				li
+					.source CNET
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+					.time June 26, 2015 7:12 PM
+		
+				li
+					.source Forbes
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+					.time June 26, 2015 6:01 PM
+				li
+					.source CNET
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+					.time June 26, 2015 7:12 PM
+		
+				li
+					.source Forbes
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+					.time June 26, 2015 6:01 PM
+				li
+					.source CNET
+					.image(style="background-image: url('http://cnet1.cbsistatic.com/hub/i/2012/10/15/1b4b10cd-fdb7-11e2-8c7c-d4ae52e62bcc/4669586ec99fd664fe4862edf2249436/Sonos_Connect_33190898_02_540x386.jpg');")
+						
+					.title What is FLAC? The high-def MP3 explained
+					.description CNET explains what FLAC is, as well as where to buy music in the FLAC format, and how to play it on your iPhone, computer, or MP3 player. In the late …
+					.time June 26, 2015 7:12 PM
+		
+				li
+					.source Forbes
+					.image(style="background-image: url('https://cdn.flipboard.com/forbes.com/a174e8925fbf44563a38c7e763c91ed733f05a60/original.jpg');")
+					.title Here Are The Phones That Will Fit Your 'Fallout 4' Pip-Boy Edition
+					.description Imagine this scenario: You recently contributed $119 to a Kickstarter campaign for an upcoming mobile RPG from one of your most respected developers. Good news, the project was successfully funded! Now the developer chooses this point in time to tell you which mobile operating system the game will …
+					.time June 26, 2015 6:01 PM
