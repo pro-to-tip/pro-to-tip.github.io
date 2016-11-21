@@ -231,6 +231,7 @@ body {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
    border-radius: 1vw;
+  -webkit-transition: all 0.45s ease-in;
 }
 .page-home .panel-tasks ul li:hover {
  box-shadow: 1vh 0vh 1.5vh 0.1vh #757575;
