@@ -225,8 +225,12 @@ body {
   background-color: #d4dce3;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  border-radius: 10px;
+   border-radius: 1vw;
 }
+.page-home .panel-tasks ul li:hover {
+ box-shadow: 1vh 0vh 1.5vh 0.1vh #757575;
+}
+
 .page-home .panel-tasks ul li .check, .page-home .panel-tasks ul li .title, .page-home .panel-tasks ul li .plus {
   display: inline-block;
   font-size: 1.0rem;
