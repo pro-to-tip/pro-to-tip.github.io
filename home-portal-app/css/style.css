@@ -111,7 +111,7 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .page-home .panel-weather .location {
-  background-color: rgba(0, 233, 233, 0.6);
+  background-color: #5E81A8;
   font-size: 1.1rem;
   line-height: 1.5rem;
   -moz-border-radius: 5px 0px 0px 0px;
