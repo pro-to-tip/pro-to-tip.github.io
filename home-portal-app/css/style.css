@@ -248,17 +248,18 @@ body {
   justify-content: space-around;
 }
 .page-home .panel-functions .icon {
-  margin: 0px 20px;
-  font-size: 45px;
-  width: 87px;
-  height: 87px;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  border: 6px solid #5E81A8;
-  -moz-border-radius: 87px;
-  -webkit-border-radius: 87px;
-  border-radius: 87px;
+     margin: 0px 20px;
+    font-size: 35px;
+    width: 15vh;
+    height: 15vh;
+    padding: 3vh;
+    text-align: center;
+    cursor: pointer;
+    border: 6px solid #99b1c6;
+    -moz-border-radius: 87px;
+    -webkit-border-radius: 87px;
+    border-radius: 87px;
+    /* color: #99b1c6; */
 }
 .page-home .panel-functions .icon .title {
   font-size: 1.0rem;
