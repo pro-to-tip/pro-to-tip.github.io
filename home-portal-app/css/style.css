@@ -753,7 +753,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 .page-calendar .panel-calendar .header .title {
   font-size: 1.5rem;
   line-height: 2.0rem;
-  background-color: rgba(0, 233, 233, 0.8);
+  background-color: #7584A2;
 }
 .page-calendar .panel-calendar .header .date {
   font-size: 1.0rem;
