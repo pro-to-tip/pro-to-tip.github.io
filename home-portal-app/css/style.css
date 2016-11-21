@@ -95,7 +95,8 @@ body {
   width: 380px;
   -moz-border-radius: 0px 5px 5px 0px;
   -webkit-border-radius: 0px;
-  border-radius: 0px 5px 5px 0px;
+  /*border-radius: 0px 5px 5px 0px;*/
+  border-radius: 0 15vw 0 0;
 }
 .page-home .panel-time .time {
   font-size: 7.0rem;
