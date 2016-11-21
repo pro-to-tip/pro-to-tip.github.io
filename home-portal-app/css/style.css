@@ -42,7 +42,7 @@ body {
   width: 160vh;
   height: 100vh;
   margin: auto auto;
-  background: Black;
+  /*background: Black;*/
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
