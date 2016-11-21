@@ -101,7 +101,7 @@ body {
 .page-home .panel-time .time {
   font-size: 7.0rem;
   line-height: 8.0rem;
-  text-align: center;
+  /*text-align: center;*/
 }
 .page-home .panel-time .date {
   background-color: #5E81A8;
