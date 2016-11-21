@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900|Dosis:300,400,600,700,800|Droid+Sans:400,700|Lato:300,400,700,900|PT+Sans:400,700|Ubuntu:300,400,500,700|Open+Sans:400,300,600,700|Roboto:400,300,500,700,900|Roboto+Condensed:400,300,700|Open+Sans+Condensed:300,700|Play:400,700|Maven+Pro:400,500,700,900&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900|Dosis:300,400,600,700,800|Droid+Sans:400,700|Lato:300,400,700,900|PT+Sans:400,700|Ubuntu:300,400,500,700|Open+Sans:400,300,600,700|Roboto:400,300,500,700,900|Roboto+Condensed:400,300,700|Open+Sans+Condensed:300,700|Play:400,700|Maven+Pro:400,500,700,900&subset=latin,latin-ext);
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -51,7 +51,7 @@ body {
   width: 800px;
   height: 480px;
   margin: auto auto;
-  background-image: url("http://ultraimg.com/images/yarQDmk.jpg");
+  background-image: url("https://ultraimg.com/images/yarQDmk.jpg");
   background-size: cover;
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
@@ -268,7 +268,7 @@ body {
 }
 
 .page-weather .bg {
-  background-image: url("http://ultraimg.com/images/WA9FyMb.jpg");
+  background-image: url("https://ultraimg.com/images/WA9FyMb.jpg");
 }
 .page-weather .panel-now {
   position: absolute;
@@ -483,7 +483,7 @@ body {
 }
 
 .page-map .bg {
-  background-image: url("http://ultraimg.com/images/9u0jRT1.jpg");
+  background-image: url("https://ultraimg.com/images/9u0jRT1.jpg");
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
@@ -530,7 +530,7 @@ body {
 }
 
 .page-tasks .bg {
-  background-image: url("http://ultraimg.com/images/gAbeciZ.jpg");
+  background-image: url("https://ultraimg.com/images/gAbeciZ.jpg");
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
   -o-filter: blur(0px);
@@ -673,7 +673,7 @@ body {
 }
 
 .page-calendar .bg {
-  background-image: url("http://ultraimg.com/images/6XirZxd.jpg");
+  background-image: url("https://ultraimg.com/images/6XirZxd.jpg");
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
   -o-filter: blur(0px);
@@ -754,7 +754,7 @@ body {
 }
 
 .page-news .bg {
-  background-image: url("http://ultraimg.com/images/NRcVB9W.jpg");
+  background-image: url("https://ultraimg.com/images/NRcVB9W.jpg");
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
   -o-filter: blur(0px);
