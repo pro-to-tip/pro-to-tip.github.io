@@ -782,7 +782,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 .page-calendar .panel-calendar ul li {
   padding: 8px 0px;
-  border-bottom: 1px solid rgba(0, 233, 233, 0.3);
+  border-bottom: 0.25vw dotted #edeef0;
 }
 .page-calendar .panel-calendar ul li .time, .page-calendar .panel-calendar ul li .title {
   display: inline-block;
