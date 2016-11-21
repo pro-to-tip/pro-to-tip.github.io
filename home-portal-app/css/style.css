@@ -53,7 +53,7 @@ body {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  overflow: hidden;
+ /* overflow: hidden;*/
 }
 .page .bg {
   position: absolute;
@@ -259,7 +259,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 1vh 1vh 8vh rgba(0, 0, 0, 0.8);
+  box-shadow: 0vh 0vh 3vh rgba(0, 0, 0, 0.8);
 }
 .page-home .panel-functions .icon {
      margin: 0px 20px;
