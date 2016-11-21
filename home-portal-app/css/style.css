@@ -184,8 +184,12 @@ body {
   background-color: #d4dce3;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  border-radius: 10px;
+  border-radius: 1vw;
 }
+.page-home .panel-calendar ul li :hover {
+box-shadow: -0.5vh 0vh 1.5vh 0.1vh #757575;
+}
+
 .page-home .panel-calendar ul li .time, .page-home .panel-calendar ul li .title {
   display: inline-block;
   font-size: 1.0rem;
