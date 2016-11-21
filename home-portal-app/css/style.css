@@ -111,6 +111,7 @@ body {
   -moz-border-radius: 0px 0px 5px 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px 0px 5px 0px;
+  font-weight: 900;
 }
 .page-home .panel-weather {
   position: absolute;
