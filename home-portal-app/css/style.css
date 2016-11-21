@@ -548,7 +548,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   filter: blur(2px);
 }
 .page-map .overlay {
-  background-color: rgba(0, 181, 255, 0.25);
+  background-color: rgba(0, 255, 10, 0);
 }
 .page-map .title {
   position: absolute;
