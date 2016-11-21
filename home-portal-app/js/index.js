@@ -262,8 +262,8 @@
     var map, mapOptions, trafficLayer;
     mapOptions = {
       center: {
-        lat: 47.480865,
-        lng: 19.060265
+        lat: 55.755826,
+        lng: 37.6173
       },
       zoom: 12,
       styles: [
