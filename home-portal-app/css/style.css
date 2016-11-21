@@ -19,7 +19,10 @@ html {
     position: absolute;
     z-index: 100;
     color: #c8d2de;
-    font-size: 1.5em;
+    font-size: 3.5vw;
+}
+#home:hover{
+color:#7584A2;
 }
 
 
