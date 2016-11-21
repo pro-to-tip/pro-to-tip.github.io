@@ -281,6 +281,7 @@ body {
   align-items: center;
   justify-content: space-around;
   border-radius: 3vw 3vw 0 0;
+ -webkit-transition: all 0.35s ease-in;
 }
 
 .page-home .panel-functions:hover{
