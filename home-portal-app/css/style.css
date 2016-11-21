@@ -605,7 +605,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   vertical-align: top;
   width: 30%;
   margin: 0 1%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #c8d2de;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -616,7 +616,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 .page-tasks .panel-tasklist .header .title {
   font-size: 1.2rem;
   line-height: 2.0rem;
-  background-color: rgba(0, 255, 84, 0.7);
+  background-color: #7584A2;
   -moz-border-radius: 5px 5px 0 0;
   -webkit-border-radius: 5px;
   border-radius: 5px 5px 0 0;
