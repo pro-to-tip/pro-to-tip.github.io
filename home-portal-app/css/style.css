@@ -154,7 +154,7 @@ body {
 }
 .page-home .panel-weather .temp .degree {
   font-size: 2rem;
-  line-height: 4rem;
+  line-height: 10vw;
   vertical-align: top;
 }
 .page-home .panel-weather .text {
