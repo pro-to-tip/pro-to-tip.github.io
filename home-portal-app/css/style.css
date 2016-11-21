@@ -18,9 +18,7 @@ html {
 #home{
     position: absolute;
     z-index: 100;
-    top: 1vh;
-    left: 5vh;
-    color: rgba(80, 114, 153, 0.42);
+    color: #c8d2de;
     font-size: 1.5em;
 }
 
