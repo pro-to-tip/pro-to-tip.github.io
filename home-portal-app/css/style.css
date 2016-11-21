@@ -589,7 +589,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   filter: blur(0px);
 }
 .page-tasks .overlay {
-  background-color: rgba(0, 153, 50, 0.3);
+  background-color: #edeef0;
 }
 .page-tasks .wrapper {
   position: absolute;
@@ -732,7 +732,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   filter: blur(0px);
 }
 .page-calendar .overlay {
-  background-color: rgba(0, 233, 233, 0.2);
+  background-color:#edeef0 ;
 }
 .page-calendar .panel-calendar {
   position: absolute;
