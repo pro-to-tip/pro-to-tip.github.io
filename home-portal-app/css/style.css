@@ -234,7 +234,7 @@ body {
   -webkit-transition: all 0.45s ease-in;
 }
 .page-home .panel-tasks ul li:hover {
- box-shadow: 1vh 0vh 1.5vh 0.1vh #757575;
+ box-shadow: 0vh 0vh 1.5vh 0.1vh #757575;
 }
 
 .page-home .panel-tasks ul li .check, .page-home .panel-tasks ul li .title, .page-home .panel-tasks ul li .plus {
