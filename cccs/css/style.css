@@ -12,17 +12,18 @@ html {
   position: relative;
 }
 .perspectiveText {
-  position: absolute;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  transform: translateX(0px) translateY(0%);
-  height: 1000px;
-  background: #1f2633;
-  transform-origin: 50% 50%;
-      transform: skew(5deg, 25deg) scaleY(0.7);
+ position: absolute;
+    margin: 0 auto;
+    top: 4vw;
+    left: 10vw;
+    right: 0;
+    transform: translateX(0px) translateY(0%);
+    height: 1000px;
+    background: transparent;
+    transform-origin: 50% 50%;
+    transform: skew(15deg, 25deg) scaleY(0.7);
     font-size: 5vw;
+    font-weight: 900;
 }
 .perspectiveText code {
   padding: 0;
