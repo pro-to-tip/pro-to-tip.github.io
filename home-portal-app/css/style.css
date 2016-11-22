@@ -771,6 +771,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   overflow: auto;
   /* scrollbar design Chrome */
   padding: 10px 15px 10px 10px;
+  color: #507299;
 }
 .page-calendar .panel-calendar ul::-webkit-scrollbar {
   height: 10px;
