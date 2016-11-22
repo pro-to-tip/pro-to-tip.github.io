@@ -760,6 +760,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   font-size: 1.5rem;
   line-height: 2.0rem;
   background-color: #7584A2;
+      font-weight: 900;
 }
 .page-calendar .panel-calendar .header .date {
   font-size: 1.0rem;
