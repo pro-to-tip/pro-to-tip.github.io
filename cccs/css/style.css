@@ -68,7 +68,7 @@ code[class*="language-"] .token.operator,
 pre[class*="language-"] .token.operator,
 .highlighter .token.operator {
   background-color: transparent;
-  color: rgba(255,255,255,0.25);
+  color: #7584A2;
 }
 pre {
   background: #fff;
