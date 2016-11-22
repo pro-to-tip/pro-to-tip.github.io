@@ -1,0 +1,82 @@
+body
+html
+  background rgba(31, 38, 51, 1)
+  height 100%
+  padding 0
+  margin 0
+.perspector
+  height 100%
+  width 100%
+  overflow hidden
+  position relative
+.perspectiveText
+  position absolute
+  margin 0 auto
+  top -150px
+  left 0
+  right 0
+  transform translateX(0px) translateY(0%)
+  height 1000px
+  //background #9e182f
+  background rgba(31, 38, 51, 1)
+  transform-origin 50% 50%
+  transform skew(-35deg,10deg) scaleY(.7)
+  font-size 100px
+  code
+    //background #9e182f
+    padding 0
+    height 1000px
+    display inline
+
+code[class*="language-"], pre[class*="language-"], .highlighter
+  text-shadow none
+  font-family "Courier New"
+  color rgba(31, 38, 51, 0.54)
+  color #9e182f
+  color rgba(167, 175, 57, 0.65)
+  line-height 1em
+  .token.tab, .token.cr, .token.lf
+    opacity 0
+  .token.keyword
+    color rgba(167, 175, 57, 0.65)
+    color #9e182f
+    font-weight bold
+  .token.punctuation
+    color rgba(255, 255, 255, 0.25)
+    color rgba(158, 24, 47, 0.55);
+  .token.operator
+    background-color transparent
+    color rgba(255, 255, 255, 0.25)
+pre
+  background white
+  padding 0
+  
+
+
+.hljs
+  background white
+  color rgba(31, 38, 51, 0.54)
+.hljs-built_in, .hljs-literal, .hljs-bullet, .hljs-code, .hljs-addition, .hljs-keyword
+  color rgba(167, 175, 57, 0.65)
+.typed-cursor
+    opacity: 1
+    color rgba(0,0,0,.2)
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    line-height 1em
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
