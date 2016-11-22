@@ -12,10 +12,10 @@ html {
   position: relative;
 }
 .perspectiveText {
-    position: absolute;
+       position: absolute;
     margin: 0 auto;
-    top: 8vw;
-    left: 10vw;
+    top: -25vw;
+    left: 30vw;
     right: 0;
     transform: translateX(0px) translateY(0%);
     height: 1000px;
