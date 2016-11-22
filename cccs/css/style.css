@@ -21,8 +21,8 @@ html {
   height: 1000px;
   background: #1f2633;
   transform-origin: 50% 50%;
-  transform: skew(-35deg, 10deg) scaleY(0.7);
-  font-size: 100px;
+      transform: skew(5deg, 25deg) scaleY(0.7);
+    font-size: 5vw;
 }
 .perspectiveText code {
   padding: 0;
