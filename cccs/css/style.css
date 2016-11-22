@@ -22,7 +22,7 @@ html {
     background: transparent;
     transform-origin: 50% 50%;
     transform: skew(15deg, 25deg) scaleY(0.7);
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 900;
 }
 .perspectiveText code {
