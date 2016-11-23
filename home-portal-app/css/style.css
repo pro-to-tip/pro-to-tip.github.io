@@ -212,6 +212,11 @@ body {
   -webkit-border-radius: 4px;
   border-radius: 4px 0 0 4px;
 }
+
+.page-home .panel-calendar ul li .time:hover{
+   box-shadow: 0.5vh 0vh 1.5vh 0.1vh #757575;
+}
+
 .page-home .panel-tasks {
   position: absolute;
   top: 210px;
