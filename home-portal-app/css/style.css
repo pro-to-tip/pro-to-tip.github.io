@@ -503,7 +503,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   border-right: 2px solid rgba(0, 0, 0, 0.3);
 }
 .page-weather .panel-forecast .box .title {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #374f6a;
   font-size: 1.5rem;
   line-height: 2.0rem;
   font-weight: 600;
