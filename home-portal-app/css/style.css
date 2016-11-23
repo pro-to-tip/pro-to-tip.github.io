@@ -883,12 +883,14 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   font-size: 1.6rem;
   line-height: 1.8rem;
   margin: 6px 0px;
+  color: #374f6a;
 }
 .page-news .panel-newslist-big li .description {
   margin-top: 10px;
   font-size: 1.0rem;
   line-height: 1.1rem;
   font-weight: 400;
+  color: #374f6a;
 }
 .page-news .panel-newslist-small {
   position: absolute;
