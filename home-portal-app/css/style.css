@@ -869,13 +869,13 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 .page-news .panel-newslist-big li .image .source {
   position: absolute;
   padding: 4px 8px;
-  background-color: #7584A2;
+  background-color: #374f6a;
   font-weight: 400;
 }
 .page-news .panel-newslist-big li .image .time {
   position: absolute;
   padding: 4px 8px;
-  background-color: rgba(0, 181, 255, 0.8);
+  background-color: #374f6a;
   bottom: 0px;
   left: 0px;
 }
