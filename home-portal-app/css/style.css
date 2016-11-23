@@ -448,7 +448,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   border-right: 2px solid rgba(0, 0, 0, 0.3);
 }
 .page-weather .panel-today .box .title {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #374f6a;
   font-size: 0.9rem;
   line-height: 1.3rem;
   font-weight: 600;
