@@ -829,7 +829,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   filter: blur(0px);
 }
 .page-news .overlay {
-  background-color: rgba(0, 181, 255, 0.2);
+  background-color: #edeef0;
 }
 .page-news .panel-newslist-big {
   position: absolute;
