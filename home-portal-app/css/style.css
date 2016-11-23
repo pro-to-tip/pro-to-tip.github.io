@@ -122,7 +122,8 @@ body {
 .page-home .panel-weather {
   position: absolute;
   top: 30px;
-  width: 380px;
+  width: 45vw;
+  height: 21vw;
   right: 0px;
   text-align: center;
   cursor: pointer;
