@@ -852,7 +852,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   white-space: normal;
   vertical-align: top;
   margin-right: 10px;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+ /* text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);*/
 }
 .page-news .panel-newslist-big li .image {
   position: relative;
