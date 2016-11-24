@@ -18,7 +18,7 @@ html {
 #home{
     position: absolute;
     z-index: 100;
-    color: #c8d2de;
+    color: white;
     font-size: 3.5vw;
   -webkit-transition: all 0.45s ease-in;
 }
