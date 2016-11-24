@@ -89,7 +89,7 @@ body {
 
 .panel {
   background-color: #c8d2de;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+ /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);*/
 }
 
 .page-home .panel-time {
