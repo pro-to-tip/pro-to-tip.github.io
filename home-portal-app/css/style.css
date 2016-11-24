@@ -20,6 +20,8 @@ html {
     z-index: 100;
     color: white;
     font-size: 3.5vw;
+      background: #507299;
+    padding-right: 1vw;
   -webkit-transition: all 0.45s ease-in;
 }
 #home:hover{
