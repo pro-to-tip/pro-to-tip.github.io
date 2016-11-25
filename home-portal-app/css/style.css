@@ -21,11 +21,11 @@ html {
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 #canvas {
       position: fixed;
-    width: 24%!important;
-    height: 70px!important;
+    width: 47%!important;
+    height: 17%!important;
     border-radius: 4vw;
     margin-left: -6vw;
-  margin-top: 5vw;
+  margin-top: 0vw;
 }
 
    
