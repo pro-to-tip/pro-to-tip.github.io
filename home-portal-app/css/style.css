@@ -140,7 +140,7 @@ body {
   cursor: pointer;
   -moz-border-radius: 5px 0px 0px 5px;
   -webkit-border-radius: 5px;
-  border-radius: 0 0 0 12.5vw;
+  border-radius: 4vw 0vw 0vw 4vw;
   background-color: rgba(100, 130, 165, 0.4);
 }
 .page-home .panel-weather .location {
