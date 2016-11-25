@@ -309,12 +309,12 @@ box-shadow: 0vh 0vh 3vh rgba(0, 0, 0, 0.8);
 .page-home .panel-functions .icon {
      margin: 0px 20px;
     font-size: 35px;
-    width: 15vh;
-    height: 15vh;
+    width: 14vh;
+    height: 14vh;
     padding: 3vh;
     text-align: center;
     cursor: pointer;
-    border: 6px solid #99b1c6;
+    border: 0px solid #99b1c6;
     -moz-border-radius: 87px;
     -webkit-border-radius: 87px;
     border-radius: 87px;
