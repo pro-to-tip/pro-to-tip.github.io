@@ -173,6 +173,7 @@ body {
  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 .page-home .panel-weather .location {
+  font-family: Orbitron, sans-serif;
   background-color: #5E81A8;
   font-size: 2.5vw;
   line-height: 2rem;
