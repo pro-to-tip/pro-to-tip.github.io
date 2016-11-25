@@ -308,6 +308,7 @@ body {
   padding: 2px 6px;
 }
 .page-home .panel-tasks ul li .check {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   position: relative;
   margin: 0px 0px 0px 2px;
   width: 20px;
