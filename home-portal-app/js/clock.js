@@ -46,14 +46,14 @@
     for (var j = 0; j < screen.height + 1; j += 5) {
       ict.beginPath();
       ict.arc(i, j, 1.5, 0, 1.5 * Math.PI);
-      ict.fillStyle = '#5e81a8;';
+      ict.fillStyle = '#5e81a8';
       ict.fill();
       ict.closePath();
     }
   }
   ict.globalCompositeOperation = 'xor';
   ict.beginPath();
-  ict.fillStyle = '#fafbfc';
+  ict.fillStyle = '#5e81a8';
   ict.fillRect(0, 0, screen.width, screen.height);
   ict.closePath();
   // HH:MM:SS
