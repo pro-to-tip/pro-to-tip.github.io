@@ -203,6 +203,7 @@ body {
   line-height: 6.5rem;
   font-weight: 400;
   color: #d4dce3;
+  font-family: Orbitron, sans-serif;
 }
 .page-home .panel-weather .temp .degree {
   font-size: 2rem;
