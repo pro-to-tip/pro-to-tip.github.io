@@ -162,6 +162,7 @@ body {
   -webkit-border-radius: 5px;
   border-radius: 4vw 0vw 0vw 4vw;
   background-color: #fafbfc;
+  -webkit-transition: all 0.45s ease-in;
 }
 .page-home .panel-weather:hover{
  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
