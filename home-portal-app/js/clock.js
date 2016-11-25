@@ -109,7 +109,7 @@
       seconds = time.seconds < 10 ? "0" + time.seconds : time.seconds;
       timeStr = hours + " " + minutes + " " + seconds;
       this.ctx.fillStyle = "#ffffff";
-      this.ctx.font = "1.5vw Verdana";
+      this.ctx.font = "3.5vw Verdana";
       textWidth = this.ctx.measureText(timeStr);
       return this.ctx.fillText(timeStr, this.centerX - textWidth.width / 2, this.centerY + 7);
     };
