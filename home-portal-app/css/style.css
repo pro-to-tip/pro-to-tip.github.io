@@ -19,15 +19,14 @@ html {
 
          
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-#clock {
- width: 500px;
-    height: 300px;
-    position: absolute;
-    left: 17vw;
-    margin-left: -250px;
-    top: -7vw;
-    margin-top: 0px;
-    display: block;
+#canvas {
+ position: absolute;
+	left: 50%;
+	top: 50%;
+	width:600px;
+	height:300px;
+	margin-left: -300px;
+	margin-top:-150px;
 }
 
    
