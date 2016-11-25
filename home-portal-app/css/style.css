@@ -233,8 +233,8 @@ body {
 .page-home .panel-tasks {
   position: absolute;
   top: 210px;
-  right: 0px;
-  width: 300px;
+  right: -1.5vw;
+  width: 42vw;
   height: 140px;
   overflow: hidden;
   cursor: pointer;
