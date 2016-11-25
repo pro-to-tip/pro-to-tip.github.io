@@ -20,7 +20,7 @@ html {
          
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 #canvas {
- position: absolute;
+/* position: absolute;*/
     left: -11%;
     top: 8%;
     width: 101%!important;
