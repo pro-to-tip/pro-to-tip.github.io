@@ -211,6 +211,7 @@ body {
   vertical-align: top;
 }
 .page-home .panel-weather .text {
+  font-family: 'Stalinist One';
   font-weight: 400;
   font-size: 1.6vw;
   line-height: 2.35vw;
