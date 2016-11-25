@@ -12,11 +12,12 @@ html, body {
 }
 
 #canvas {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width:600px;
-	height:300px;
-	margin-left: -300px;
-	margin-top:-150px;
+    position: absolute;
+    width: 47.5vw;
+    left: -40.5px;
+    top: -160px;
+    height: 19rem;
+    margin-top: 38%;
+    padding-bottom: 163px;
+    padding-top: 35px;
 }
