@@ -20,12 +20,12 @@ html {
          
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 #canvas {
-      border-radius: 0vw 4vw 4vw 0vw;
-    position: absolute;
-    width: 600px;
+border-radius: 0vw 4vw 4vw 0vw;
+    position: inherit;
+    width: 21rem;
     left: -40.5px;
     top: -133px;
-       height: 300px;
+    height: 10rem;
     margin-top: 38%;
 }
    
