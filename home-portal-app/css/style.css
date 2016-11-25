@@ -251,7 +251,7 @@ body {
   padding: 2px 6px;
 }
 .page-home .panel-calendar ul li .time {
-  width: 120px;
+  width: auto;
   text-align: center;
   font-weight: 300;
   color: #fafbfc;
