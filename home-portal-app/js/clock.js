@@ -31,7 +31,7 @@
         pointer.end.y = py;
       },
       move: function() {
-        var d = Math.max(screen.width, screen.height) * 2;
+        var d = Math.max(screen.width, screen.height) * 4;
         px = pointer.drag.x / d;
         py = pointer.drag.y / d;
       }
