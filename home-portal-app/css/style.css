@@ -354,6 +354,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 .page-weather .panel-now .mainInfo {
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  background: #c8d2de;
 }
 .page-weather .panel-now .mainInfo .icon {
   display: block;
