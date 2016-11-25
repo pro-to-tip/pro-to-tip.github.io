@@ -141,7 +141,7 @@ body {
   -moz-border-radius: 5px 0px 0px 5px;
   -webkit-border-radius: 5px;
   border-radius: 4vw 0vw 0vw 4vw;
-  background-color: rgba(100, 130, 165, 0.4);
+  background-color: #fafbfc;
 }
 .page-home .panel-weather .location {
   background-color: #5E81A8;
