@@ -149,7 +149,7 @@ body {
   line-height: 2rem;
   -moz-border-radius: 5px 0px 0px 0px;
   -webkit-border-radius: 5px;
-  border-radius: 5px 0px 0px 0px;
+  border-radius: 4vw 0px 0px 0px;
   padding-right: 20vw;
   font-weight: 900;
 }
