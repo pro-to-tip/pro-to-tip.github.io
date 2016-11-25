@@ -319,6 +319,7 @@ box-shadow: 0vh 0vh 3vh rgba(0, 0, 0, 0.8);
     -webkit-border-radius: 87px;
     border-radius: 87px;
    -webkit-transition: all 0.45s ease-in;
+      background: #5e81a8;
   
     /* color: #99b1c6; */
 }
