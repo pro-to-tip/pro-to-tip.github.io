@@ -42,8 +42,8 @@
   texture.width = screen.width;
   texture.height = screen.height;
   var ict = texture.getContext('2d');
-  for (var i = 0; i < screen.width + 0; i += 5) {
-    for (var j = 0; j < screen.height + 0; j += 5) {
+  for (var i = 0; i < screen.width + 1; i += 5) {
+    for (var j = 0; j < screen.height + 1; j += 5) {
       ict.beginPath();
       ict.arc(i, j, 1.5, 0, 1.5 * Math.PI);
       ict.fillStyle = '#fafbfc';
