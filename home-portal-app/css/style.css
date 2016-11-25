@@ -253,6 +253,7 @@ body {
   padding: 2px 6px;
 }
 .page-home .panel-calendar ul li .time {
+  font-family: Orbitron, sans-serif;
   width: auto;
   text-align: center;
   font-weight: 300;
