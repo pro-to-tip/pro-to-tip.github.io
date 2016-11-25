@@ -46,14 +46,14 @@
     for (var j = 0; j < screen.height + 5; j += 5) {
       ict.beginPath();
       ict.arc(i, j, 2, 0, 2 * Math.PI);
-      ict.fillStyle = 'transparent';
+      ict.fillStyle = '#fafbfc';
       ict.fill();
       ict.closePath();
     }
   }
   ict.globalCompositeOperation = 'xor';
   ict.beginPath();
-  ict.fillStyle = 'transparent';
+  ict.fillStyle = '#fafbfc';
   ict.fillRect(0, 0, screen.width, screen.height);
   ict.closePath();
   // HH:MM:SS
@@ -137,7 +137,7 @@
   // main loop
   function run() {
     requestAnimationFrame(run);
-    ctx.fillStyle = "transparent";
+    ctx.fillStyle = "#fafbfc";
     ctx.fillRect(0, 0, screen.width, screen.height);
     rz -= Math.PI / 200;
     rx += px;
