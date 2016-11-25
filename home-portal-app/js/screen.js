@@ -131,7 +131,7 @@ var ge1doot = ge1doot || {
 				if (m < n) {
 					if (!init) {
 						init = true;
-						canvas.style.width = canvas.style.height = "100px";
+						canvas.style.width = canvas.style.height = "100%";
 						canvas.width = canvas.height = 100;
 						canvas.style.position = "fixed";
 						canvas.style.left = canvas.style.top = "50%";
