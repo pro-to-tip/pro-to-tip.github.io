@@ -22,7 +22,7 @@ html {
 #canvas {
   position: fixed;
   /*position:absolute;*/
-      width: 100%;
+      width: 300px;
        max-height: 100px;
 
 }
