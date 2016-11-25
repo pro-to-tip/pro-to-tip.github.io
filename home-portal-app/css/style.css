@@ -150,6 +150,7 @@ body {
   border-radius: 0px 0px 4vw 0px;
   font-weight: 900;
   -webkit-transition: all 0.45s ease-in;
+  font-family: 'Orbitron', sans-serif;
 }
 .page-home .panel-time .date:hover{
  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
