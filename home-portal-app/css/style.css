@@ -22,10 +22,10 @@ html {
 #canvas {
   /*  position: fixed;*/
     position: absolute;
-    left: -20%;
-    top: 50%;
+    left: -11%;
+    top: 40%;
     width: 100%;
-    height:;
+    height: 70px;
 }
 
    
