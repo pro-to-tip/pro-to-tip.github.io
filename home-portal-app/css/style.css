@@ -224,7 +224,8 @@ body {
 .page-home .panel-calendar ul li {
   padding: 0;
   margin: 8px 0px;
-  background-color: #7584A2;
+  background-color:#fafbfc;
+  color:#7584A2;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 1vw;
