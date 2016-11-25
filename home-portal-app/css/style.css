@@ -302,6 +302,7 @@ body {
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
+  background: #5E81A8;
 }
 .page-home .panel-tasks ul li.checked .check:after {
   content: '\f00c';
