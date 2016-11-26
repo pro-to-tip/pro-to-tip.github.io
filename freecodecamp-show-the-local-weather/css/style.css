@@ -62,10 +62,19 @@ p {
   font-weight: 500;
 }
 .unit-toggle button:disabled {
-  color: #f9c349;
-  font-size: 1.2em;
-  font-weight: 700;
-  opacity: 1;
+color: #673AB7;
+    font-weight: 900;
+    border-radius: 4vw;
+    opacity: 1;
+    /* margin: 0px 20px; */
+    /* font-size: 35px; */
+    /* width: 14vh; */
+    /* height: 14vh; */
+    /* padding: 3vh; */
+    text-align: center;
+    cursor: pointer;
+    border: 3px dotted #00ff0a;
+    background: rgba(0, 255, 10, 0);
 }
 
 .forecast {
