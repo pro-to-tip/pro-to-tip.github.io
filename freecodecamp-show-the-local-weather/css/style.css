@@ -74,8 +74,10 @@ p {
 }
 
 .forecast_icon {
- 
-  font-size: em;
+    font-size: 4em;
+    position: absolute;
+    left: 0;
+    top: 14vw;
 }
 
 .forecast_summary, .forecast_city, .forecast_country {
@@ -85,7 +87,7 @@ p {
 }
 
 .forecast_city {
-  
+  float:left;
   font-weight: 700;
 }
 
