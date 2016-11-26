@@ -22,13 +22,13 @@ p {
 }
 
 .se-pre-con {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url("https://crossorigin.me/http://eina.ca/weather/assets/img/load.gif") center no-repeat #fff;
+    position: fixed;
+    left: -86px;
+    top: -12px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(https://crossorigin.me/http://eina.ca/weather/assets/img/load.gif) center no-repeat transparent;
 }
 
 .wrapper {
