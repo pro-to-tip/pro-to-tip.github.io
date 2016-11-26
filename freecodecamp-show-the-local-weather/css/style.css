@@ -53,6 +53,9 @@ p {
 
 .unit-toggle {
   float: right;
+    position: absolute;
+    left: 89vw;
+    top: 7vw;
 }
 .unit-toggle button:enabled {
   opacity: 0.5;
