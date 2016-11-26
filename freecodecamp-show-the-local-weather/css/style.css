@@ -113,7 +113,7 @@ p {
 .forecast_high, .forecast_low {
   display: inline-block;
   padding: 0 1.06383%;
-  font-family: "Montserrat", sans-serif;
+
 }
 
 .forecast_low, .day_low,
@@ -218,7 +218,7 @@ p {
 }
 
 .day_high, .day_low {
-  font-family: "Montserrat", sans-serif;
+  
   vertical-align: 17%;
 }
 
