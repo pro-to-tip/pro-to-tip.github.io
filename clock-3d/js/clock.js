@@ -42,18 +42,18 @@
   texture.width = screen.width;
   texture.height = screen.height;
   var ict = texture.getContext('2d');
-  for (var i = 0; i < screen.width + 5; i += 5) {
-    for (var j = 0; j < screen.height + 5; j += 5) {
+  for (var i = 0; i < screen.width + 1; i += 5) {
+    for (var j = 0; j < screen.height + 1; j += 5) {
       ict.beginPath();
-      ict.arc(i, j, 3, 0, 3 * Math.PI);
-      ict.fillStyle = 'rgb(0,0,0)';
+      ict.arc(i, j, 1.5, 0, 1.5 * Math.PI);
+      ict.fillStyle = '#fafbfc';
       ict.fill();
       ict.closePath();
     }
   }
   ict.globalCompositeOperation = 'xor';
   ict.beginPath();
-  ict.fillStyle = 'rgb(32,32,0)';
+  ict.fillStyle = '#fafbfc';
   ict.fillRect(0, 0, screen.width, screen.height);
   ict.closePath();
   // HH:MM:SS
@@ -137,7 +137,7 @@
   // main loop
   function run() {
     requestAnimationFrame(run);
-    ctx.fillStyle = "rgba(0,0,0,0.25)";
+    ctx.fillStyle = "#fafbfc";
     ctx.fillRect(0, 0, screen.width, screen.height);
     rz -= Math.PI / 200;
     rx += px;
