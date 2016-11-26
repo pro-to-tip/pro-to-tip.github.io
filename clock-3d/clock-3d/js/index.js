@@ -53,7 +53,7 @@
   }
   ict.globalCompositeOperation = 'xor';
   ict.beginPath();
-  ict.fillStyle = 'rgb(32,32,0)';
+  ict.fillStyle = '#fafbfc';
   ict.fillRect(0, 0, screen.width, screen.height);
   ict.closePath();
   // HH:MM:SS
