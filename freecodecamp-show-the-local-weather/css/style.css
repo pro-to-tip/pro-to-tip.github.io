@@ -72,7 +72,7 @@ p {
 
 .forecast_icon {
  
-  font-size: 8em;
+  font-size: em;
 }
 
 .forecast_summary, .forecast_city, .forecast_country {
