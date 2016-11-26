@@ -82,7 +82,7 @@ p {
     border: 3px dotted #F44336;
     background: rgba(0, 255, 10, 0);
    -webkit-transition: all 0.35s ease-in; 
-  box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
+  
 }
 .unit-toggle button:enabled:hover {
 box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
@@ -102,6 +102,7 @@ color: #673AB7;
     border: 3px dotted #00ff0a;
     background: rgba(0, 255, 10, 0);
    -webkit-transition: all 0.35s ease-in; 
+  box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
 }
 .unit-toggle button:disabled:hover {
 box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
