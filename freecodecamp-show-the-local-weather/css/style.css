@@ -96,6 +96,9 @@ p {
 }
 
 .forecast_cont {
+      position: absolute;
+    left: 40vw;
+    top: 15vw;
  
 }
 
