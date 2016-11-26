@@ -57,13 +57,13 @@ p {
 }
 
 .unit-toggle {
-  float: right;
+     float: right;
     position: absolute;
-    left: 89vw;
+    left: 88vw;
     top: 7vw;
-  padding-right:5vw;
-      margin-left: -31px;
-  -webkit-transition: all 0.35s ease-in; 
+    padding-right: 0vw;
+    margin-left: 0px;
+    -webkit-transition: all 0.35s ease-in;
 }
 .unit-toggle button:enabled {
      opacity: 0.5;
