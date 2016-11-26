@@ -4,6 +4,7 @@ body {
   font-family: 'Orbitron', sans-serif!important;
   font-size: 1.1em;
   color:  #5e81a8;
+   -webkit-transition: all 2.35s ease-in; 
 }
 
 p {
@@ -73,6 +74,7 @@ p {
     cursor: pointer;
     border: 3px dotted #F44336;
     background: rgba(0, 255, 10, 0);
+   -webkit-transition: all 2.35s ease-in; 
 }
 .unit-toggle button:disabled {
 color: #673AB7;
@@ -88,6 +90,7 @@ color: #673AB7;
     cursor: pointer;
     border: 3px dotted #00ff0a;
     background: rgba(0, 255, 10, 0);
+   -webkit-transition: all 2.35s ease-in; 
 }
 
 .forecast {
