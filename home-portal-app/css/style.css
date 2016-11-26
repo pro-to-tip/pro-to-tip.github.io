@@ -30,7 +30,10 @@ html {
     padding-bottom: 20vw;
     padding-top: 5vw;
 }
-   
+  
+#wthr {
+
+}
 
 
 
@@ -158,7 +161,7 @@ body {
 .page-home .panel-weather {
   position: absolute;
   top: 30px;
-  width: 45vw;
+  width: 46vw;
   height: 20.2vw;
   right: 0px;
   text-align: center;
