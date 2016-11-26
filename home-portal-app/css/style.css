@@ -194,6 +194,7 @@ body {
   border-radius: 4vw 0px 0px 0px;
   padding-right: 10vw;
   font-weight: 900;
+  content: "\f2c9";
   -webkit-transition: all 0.45s ease-in;
 }
 .page-home .panel-weather .location:hover{
