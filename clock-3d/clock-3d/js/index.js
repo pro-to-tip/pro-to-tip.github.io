@@ -46,7 +46,7 @@
     for (var j = 0; j < screen.height + 5; j += 5) {
       ict.beginPath();
       ict.arc(i, j, 2, 0, 2 * Math.PI);
-      ict.fillStyle = 'rgb(0,0,0)';
+      ict.fillStyle = '#fafbfc';
       ict.fill();
       ict.closePath();
     }
