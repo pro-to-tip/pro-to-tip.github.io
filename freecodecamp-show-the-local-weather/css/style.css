@@ -96,9 +96,8 @@ p {
 
 .forecast_temp {
   display: block;
-  padding-bottom: 6.38298%;
-  font-family: "Montserrat", sans-serif;
-  font-size: 5em;
+
+
   font-weight: 700;
   line-height: 1.1;
 }
