@@ -192,7 +192,7 @@ body {
   -moz-border-radius: 5px 0px 0px 0px;
   -webkit-border-radius: 5px;
   border-radius: 4vw 0px 0px 0px;
-  padding-right: 20vw;
+  padding-right: 10vw;
   font-weight: 900;
   -webkit-transition: all 0.45s ease-in;
 }
