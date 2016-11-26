@@ -1,18 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900|Dosis:300,400,600,700,800|Droid+Sans:400,700|Lato:300,400,700,900|PT+Sans:400,700|Ubuntu:300,400,500,700|Open+Sans:400,300,600,700|Roboto:400,300,500,700,900|Roboto+Condensed:400,300,700|Open+Sans+Condensed:300,700|Play:400,700|Maven+Pro:400,500,700,900&subset=latin,latin-ext);
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html {
-  background-color: #edeef0;
-  font-size: 16px;
- font-family: 'Ubuntu', sans-serif;
-  font-weight: 900;
-  color: White;
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
+background-color: #edeef0;
+font-size: 16px;
+font-family: 'Ubuntu', sans-serif;
+font-weight: 900;
+color: White;
+text-rendering: optimizeLegibility !important;
+-webkit-font-smoothing: antialiased !important;
 }
 
 
@@ -20,15 +20,15 @@ html {
          
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 #canvas {
-   border-radius: 0vw 8vw 10vw 0vw;
-    position: absolute;
-    width: 47.5vw;
-    left: -40.5px;
-    top: -21vw;
-    height: 20rem;
-    margin-top: 38%;
-    padding-bottom: 20vw;
-    padding-top: 5vw;
+border-radius: 0vw 8vw 10vw 0vw;
+position: absolute;
+width: 47.5vw;
+left: -40.5px;
+top: -21vw;
+height: 20rem;
+margin-top: 38%;
+padding-bottom: 20vw;
+padding-top: 5vw;
 }
   
 #wthr {
@@ -48,16 +48,17 @@ top: 4vw;
 
 
 #home{
-    position: absolute;
-    z-index: 100;
-    color: white;
-    font-size: 3.5vw;
-      background: #fafbfc;
-    padding-right: 1vw;
-  -webkit-transition: all 0.45s ease-in;
-      border-radius: 0vw 1vw 1vw 0;
- padding-bottom: 0.49px;
+position: absolute;
+z-index: 100;
+color: white;
+font-size: 3.5vw;
+background: #fafbfc;
+padding-right: 1vw;
+-webkit-transition: all 0.45s ease-in;
+border-radius: 0vw 1vw 1vw 0;
+padding-bottom: 0.49px;
 }
+
 #home:hover{
 color:#7584A2;
   background: #edeef0;
@@ -68,32 +69,32 @@ color:#7584A2;
 
 
 body {
-  overflow: hidden;
-  -webkit-transition: all 2.35s ease-in; 
+overflow: hidden;
+-webkit-transition: all 2.35s ease-in; 
 }
 
 .page {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  width: 160vh;
-  height: 100vh;
-  margin: auto auto;
-  /*background: Black;*/
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
- /* -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
- /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);*/
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
- /* overflow: hidden;*/
+display: none;
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+width: 160vh;
+height: 100vh;
+margin: auto auto;
+/*background: Black;*/
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+/* -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+-webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+/* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);*/
+-moz-user-select: -moz-none;
+-ms-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+/* overflow: hidden;*/
 }
 .page .bg {
   position: absolute;
