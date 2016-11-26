@@ -4,17 +4,17 @@ body {
   font-family: 'Orbitron', sans-serif!important;
   font-size: 1.1em;
   color:  #5e81a8;
-   -webkit-transition: all 2.35s ease-in; 
+   -webkit-transition: all 0.35s ease-in; 
 }
 
 p {
   margin: 0;
-  -webkit-transition: all 2.35s ease-in; 
+  -webkit-transition: all 0.35s ease-in; 
 }
 
 .no-js #loader {
   display: none;
-  -webkit-transition: all 2.35s ease-in; 
+  -webkit-transition: all 0.35s ease-in; 
 }
 
 .js #loader {
@@ -22,7 +22,7 @@ p {
   position: absolute;
   left: 100px;
   top: 0;
-  -webkit-transition: all 2.35s ease-in; 
+  -webkit-transition: all 0.35s ease-in; 
 }
 
 .se-pre-con {
@@ -33,7 +33,7 @@ p {
     height: 100%;
     z-index: 9999;
     background: url(https://crossorigin.me/http://eina.ca/weather/assets/img/load.gif) center no-repeat transparent;
-  -webkit-transition: all 2.35s ease-in; 
+  -webkit-transition: all 0.35s ease-in; 
 }
 
 .wrapper {
@@ -63,7 +63,7 @@ p {
     top: 7vw;
   padding-right:5vw;
       margin-left: -11px;
-  -webkit-transition: all 2.35s ease-in; 
+  -webkit-transition: all 0.35s ease-in; 
 }
 .unit-toggle button:enabled {
      opacity: 0.5;
@@ -81,7 +81,7 @@ p {
     cursor: pointer;
     border: 3px dotted #F44336;
     background: rgba(0, 255, 10, 0);
-   -webkit-transition: all 2.35s ease-in; 
+   -webkit-transition: all 0.35s ease-in; 
 }
 .unit-toggle button:enabled:hover {
 box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
@@ -100,7 +100,7 @@ color: #673AB7;
     cursor: pointer;
     border: 3px dotted #00ff0a;
     background: rgba(0, 255, 10, 0);
-   -webkit-transition: all 2.35s ease-in; 
+   -webkit-transition: all 0.35s ease-in; 
 }
 .unit-toggle button:disabled:hover {
 box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
@@ -108,7 +108,7 @@ box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
 
 .forecast {
   text-align: center;
-  -webkit-transition: all 2.35s ease-in; 
+  -webkit-transition: all 0.35s ease-in; 
 
 }
 
@@ -117,7 +117,7 @@ box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
     position: absolute;
     left: 0;
     top: 14vw;
-  -webkit-transition: all 2.35s ease-in; 
+  -webkit-transition: all 0.35s ease-in; 
 }
 
 .forecast_summary, .forecast_city, .forecast_country {
