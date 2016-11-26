@@ -76,6 +76,9 @@ p {
     background: rgba(0, 255, 10, 0);
    -webkit-transition: all 2.35s ease-in; 
 }
+.unit-toggle button:enabled:hover {
+box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
+}
 .unit-toggle button:disabled {
 color: #673AB7;
     font-weight: 900;
@@ -91,6 +94,9 @@ color: #673AB7;
     border: 3px dotted #00ff0a;
     background: rgba(0, 255, 10, 0);
    -webkit-transition: all 2.35s ease-in; 
+}
+.unit-toggle button:disabled:hover {
+box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
 }
 
 .forecast {
