@@ -9,10 +9,12 @@ body {
 
 p {
   margin: 0;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .no-js #loader {
   display: none;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .js #loader {
@@ -20,6 +22,7 @@ p {
   position: absolute;
   left: 100px;
   top: 0;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .se-pre-con {
@@ -30,6 +33,7 @@ p {
     height: 100%;
     z-index: 9999;
     background: url(https://crossorigin.me/http://eina.ca/weather/assets/img/load.gif) center no-repeat transparent;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .wrapper {
@@ -59,6 +63,7 @@ p {
     top: 7vw;
   padding-right:5vw;
       margin-left: -11px;
+  -webkit-transition: all 2.35s ease-in; 
 }
 .unit-toggle button:enabled {
      opacity: 0.5;
@@ -103,6 +108,7 @@ box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
 
 .forecast {
   text-align: center;
+  -webkit-transition: all 2.35s ease-in; 
 
 }
 
@@ -111,32 +117,38 @@ box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
     position: absolute;
     left: 0;
     top: 14vw;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .forecast_summary, .forecast_city, .forecast_country {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.07em;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .forecast_city {
   float:left;
   font-weight: 700;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .forecast_summary {
   font-size: 1.3em;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .forecast_cont {
       position: absolute;
     left: 40vw;
     top: 15vw;
+  -webkit-transition: all 2.35s ease-in; 
  
 }
 
 .forecast_temp {
   display: block;
+  -webkit-transition: all 2.35s ease-in; 
 
 
   font-weight: 700;
@@ -146,17 +158,19 @@ box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
 .forecast_high, .forecast_low {
   display: inline-block;
   padding: 0 1.06383%;
-
+-webkit-transition: all 2.35s ease-in; 
 }
 
 .forecast_low, .day_low,
 .day .wi-direction-down {
   color: #2b8a7f;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .forecast_high, .day_high,
 .day .wi-direction-up {
   color: #f95a43;
+  -webkit-transition: all 2.35s ease-in; 
 }
 
 .weekly ul {
