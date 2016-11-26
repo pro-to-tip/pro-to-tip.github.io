@@ -137,7 +137,7 @@
   // main loop
   function run() {
     requestAnimationFrame(run);
-    ctx.fillStyle = "rgba(0,0,0,0.25)";
+    ctx.fillStyle = "#fafbfc";
     ctx.fillRect(0, 0, screen.width, screen.height);
     rz -= Math.PI / 200;
     rx += px;
