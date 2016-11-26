@@ -58,8 +58,21 @@ p {
     top: 7vw;
 }
 .unit-toggle button:enabled {
-  opacity: 0.5;
-  font-weight: 500;
+     opacity: 0.5;
+    font-weight: 500;
+    color: #673AB7;
+    font-weight: 900;
+    border-radius: 4vw;
+    /* opacity: 1; */
+    /* margin: 0px 20px; */
+    /* font-size: 35px; */
+    /* width: 14vh; */
+    /* height: 14vh; */
+    /* padding: 3vh; */
+    text-align: center;
+    cursor: pointer;
+    border: 3px dotted #F44336;
+    background: rgba(0, 255, 10, 0);
 }
 .unit-toggle button:disabled {
 color: #673AB7;
