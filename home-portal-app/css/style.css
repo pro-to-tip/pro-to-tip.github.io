@@ -52,11 +52,11 @@ top: 4vw;
     z-index: 100;
     color: white;
     font-size: 3.5vw;
-      background: #507299;
+      background: #fafbfc;
     padding-right: 1vw;
   -webkit-transition: all 0.45s ease-in;
       border-radius: 0vw 1vw 1vw 0;
-  padding-bottom:0.3vw;
+ padding-bottom: 0.49px;
 }
 #home:hover{
 color:#7584A2;
