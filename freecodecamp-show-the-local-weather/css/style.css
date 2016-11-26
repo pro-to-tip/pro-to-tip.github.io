@@ -123,7 +123,7 @@ box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 10px;
     font-size: 4em;
     position: absolute;
     left: 0;
-    top: 11vw;
+    top: 13.1vw;
   -webkit-transition: all 0.35s ease-in; 
   text-shadow: 0 0 1px #edeef0, 1px 1px 1px #edeef0, 2px 2px 1px #edeef0, 3px 3px 1px #edeef0, 4px 4px 1px #edeef0, 5px 5px 1px #5e80a8;
 }
