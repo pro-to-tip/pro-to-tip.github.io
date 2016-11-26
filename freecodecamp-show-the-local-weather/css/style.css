@@ -58,6 +58,7 @@ p {
     left: 89vw;
     top: 7vw;
   padding-right:5vw;
+      margin-left: -11px;
 }
 .unit-toggle button:enabled {
      opacity: 0.5;
