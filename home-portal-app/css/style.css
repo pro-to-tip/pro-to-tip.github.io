@@ -974,7 +974,8 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
   height: 460px;
   overflow: auto;
   /* scrollbar design Chrome */
-  background-color: #c8d2de;
+ /* background-color: #c8d2de;*/
+  background-color:#fafbfc;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
