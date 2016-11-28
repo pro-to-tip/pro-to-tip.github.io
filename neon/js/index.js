@@ -4,8 +4,8 @@ Object.getOwnPropertyNames(Math).map(function(p) {
 });
 
 var HEX_CRAD = 32, 
-		HEX_BG = '#edeef0', 
-		HEX_HL = '#edeef0', 
+		HEX_BG = 'rgba(255, 255, 255, 0)', 
+		HEX_HL = 'rgba(255, 255, 255, 0)', 
 		HEX_HLW = 2, 
 		HEX_GAP = 4, 
 		NEON_PALETE = [
