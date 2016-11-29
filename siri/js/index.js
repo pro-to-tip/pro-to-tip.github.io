@@ -7,7 +7,7 @@ $(function() {
   document.title = "New Tab"
   var tip;
   var defaultBehavior = {
-    url: 'https://vk.com/audio?q=',
+    url: 'https://rutrackermirror.org/index.php?q=',
     firstHit: 'https://www.google.com/search?btnI&q='
   };
   /*defaultBehavior = {
