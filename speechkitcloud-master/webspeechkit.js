@@ -18,7 +18,7 @@
         var js = document.createElement('script');
 
         js.type = 'text/javascript';
-        js.src = 'https://webasr.yandex.net/jsapi/v1/webspeechkit-settings.js?seed=' + Math.random();
+        js.src = 'webspeechkit-settings.js?seed=' + Math.random();
 
         document.head.appendChild(js);
     }
