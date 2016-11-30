@@ -3,9 +3,9 @@ window.onload = function () {
 
     var textline = new ya.speechkit.Textline('textline', {
         onInputFinished: function (text) {
-            alert(text);
+          //  alert(text);
         }
-    });
+   });
 
     $('#get_value').bind('click', function () {
         if (textline.value() && (textline.value() !== '')) {
