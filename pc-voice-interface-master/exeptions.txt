@@ -1,0 +1,2 @@
+\AppData
+\$Recycle.Bin\

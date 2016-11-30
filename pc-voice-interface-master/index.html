@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+</head>
+
+<body>
+    <div class="titlebar">
+		   <div id="settings"></div>
+           <div id="window-min">-</div>
+		   <div id="window-close">x</div>
+    </div>
+	<header><button id="mic_btn"><img src="pic/mic.png"></button></header>
+	<div class="container"></div>
+
+	
+	
+	<script src="http://www.yandex.st/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://www.yandex.st/jquery-ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="libs/webspeechkit.min.js"></script>
+	<script src="actions.js"></script>
+	<script src="key.js"></script>
+	<script>
+		var gui = require('nw.gui');
+		var win = gui.Window.get();
+		win.isVisible = false;
+		win.on('minimize', function() {win.isVisible = false;});
+		$('#window-close').on("click", function() {win.close();});
+		$('#window-min').on("click", function() {win.minimize();});
+		$('#settings').on("click", function() {win.showDevTools();});
+		var tray = new gui.Tray({icon: 'pic/ico.png' });
+		tray.on('click', function() {win.show(); win.isVisible = true;});
+		if (require('os').uptime() > 180) {win.show(); win.isVisible = true;} // запуск не из автозагрузки, значит не надо прятать в трее
+		gui.App.on('open', function(cmdline) {win.show(); win.isVisible = true;});
+		$('body').on('dragenter', false).on('dragover', false).on('dragleave', false)
+			.on('dragend', false).on('drop', false);
+		var container = $('.container')[0];
+		var mic = $('#mic_btn');
+		var shortcut = new gui.Shortcut({key: 'Alt+S'});
+		gui.App.registerGlobalHotKey(shortcut);
+		shortcut.on('active', function() {mic.trigger('click');});
+		shortcut.on('failed', function(msg) {console.log(msg);});
+		win.on('close', function() {
+			this.hide();
+			gui.App.unregisterGlobalHotKey(shortcut); 
+			writeCache();
+			this.close(true);
+		});
+		
+		function scrollDown() {
+			container.scrollTop = container.scrollHeight - container.clientHeight;
+		}
+		
+		function notify() {
+			if (win.isVisible) return;
+			var messege = $('.app_voice').last().contents().first().text();
+			var notification = new Notification('PC Voice Interface', {icon: 'pic/mic.png',	body: messege});
+			notification.onclick = function () {win.show(); win.isVisible = true;}
+			notification.onshow = function () {setTimeout(function() {notification.close();}, 1000);}
+		}
+		
+        var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+                return v.toString(16);
+                });
+        var key = yourAPIkey; // You can get it here: https://developer.tech.yandex.ru
+        var dict = new webspeechkit.Dictation("wss://webasr.yandex.net/asrsocket.ws", uuid, key);
+		        		
+		mic.on("click", function() {
+			if (mic.hasClass("active_mic")) {dict.stop(); mic.removeClass("active_mic");}
+			else {
+				mic.addClass("active_mic"); 
+				$('<div class="user_voice"></div>').appendTo(container);
+				dict.start('', function(){}, function(err) {console.log('dict.start: ', err);},
+							makeSence, function(info) {});
+			}
+		});
+		
+		function makeSence(text, finished) {
+			$('.user_voice').last().html(text);
+			scrollDown();
+			if (finished) {
+				dict.stop();
+				mic.removeClass("active_mic");
+				var queryparams = {
+					text: text,
+					key: key,
+					layers: 'Date,Fio,GeoAddr,ProcessedRequest,Tokens,Morph' 
+				};
+				$.getJSON( "https://vins-markup.voicetech.yandex.net/markup/0.x/", queryparams, 
+							function(data) { var command = findCommands(parseSentence(data)); 
+								if (command.act) executeCommand(command.act, command.subj);
+								//drawTable(data);
+								//console.log(parseSentence(data));
+								scrollDown();}
+				);
+            }
+        }
+		
+		function parseSentence(data) {
+			var phrase = []
+			for (var i = 0; i < data.Tokens.length; i++) {
+				phrase[i] = {};
+				phrase[i].input = data.Tokens[i].Text;
+				var word = data.Morph[i].Lemmas[0];
+				phrase[i].inf = word.Text;
+				var gram = word.Grammems ? word.Grammems[0].split(' ') : [];
+				for (var j = 0; j < gram.length; j++) phrase[i][gram[j]] = true;
+			}
+			if (data.Fio) for (var i = 0; i < data.Fio.length; i++) 
+				for (var j = data.Fio[i].Tokens.Begin; j < data.Fio[i].Tokens.End; j++)
+					phrase[j].fio = true;
+			return phrase;
+		}
+
+		function findCommands(phrase) {
+			var vIdx, command = {};
+			var subj = [];
+			for (var i = 0; i < phrase.length; i++) {
+				if (phrase[i].V && phrase[i].imper) {vIdx = i; command.act = phrase[vIdx].inf;}
+				if (command.act && phrase[i].S && phrase[i].sg && !phrase[i].n) {
+					phrase[i].final = phrase[i].inf;
+					for (var j = vIdx+1; j <= Math.min(i+1, phrase.length-1); j++) {
+						if (phrase[j].A || phrase[j].fio) phrase[j].final = phrase[j].inf;
+					}
+				}
+				if (command.act && phrase[i].S) break;
+			}
+			for (var i = vIdx+1; i < phrase.length; i++) subj.push(phrase[i].final || phrase[i].input);
+			command.subj = subj.join(' ');
+			if (command.act) console.log('findCommands: ', command.act, subj);
+			else console.log('findCommands: команды не найдены');
+			return command;
+		}
+
+
+		function drawTable(speach) {
+			var items = [];
+			for (var i = 0; i < speach.Morph.length; i++) {
+				var word = speach.Morph[i].Lemmas[0];
+				if (word.Grammems)
+				items.push( "<tr><td>" + word.Text + "</td><td>" + word.Grammems[0] + "</td></tr>" );
+			}
+			$( "<table/>", {html: items.join( "" )}).appendTo(container);
+		}
+	
+/**************************************
+/	Autoupdating the app
+***************************************/
+
+	var admzip = require('adm-zip');
+	var autoupdater = require('auto-updater')({
+        pathToJson: '',
+        async: true,
+        silent: false,
+        autoupdate: false,
+        check_git: true
+    });
+    autoupdater.on('check-up-to-date',function(v){
+	  if (gui.App.argv[1]) {
+	    win.show();
+		win.isVisible = true;
+		answer('Приложение обновлено до версии ' + v);
+	  }
+    });
+    autoupdater.on('check-out-dated',function(v_old , v){
+      answer('Доступно обновление до версии ' + v + '. Текущая версия ' + v_old + '.<BR>');
+	  answer('<input type="button" value="Обновить" onclick="autoupdater.forceDownloadUpdate();">');
+    });
+    autoupdater.on('download-error',function(err){
+      console.log("Error when downloading: " + err);
+    });
+    autoupdater.on('update-downloaded',function(){autoupdater.forceExtract();});
+    autoupdater.on('update-not-installed',function(){autoupdater.forceExtract();});
+    autoupdater.on('extracted',function(){updatePackage();});
+    //autoupdater.on('end',function(){});
+    autoupdater.forceCheck();
+	
+	function updatePackage() {
+	  var appZip = new admzip();
+	  var files = fs.readdirSync(process.cwd());
+	  for (var i = 0; i < files.length; i++) {
+		var path = process.cwd()+'\\'+files[i];
+		if (fs.statSync(path).isDirectory()) {
+			appZip.addLocalFolder(path, files[i]);
+		} else {
+			appZip.addLocalFile(path);
+		}
+	  }
+	  appZip.writeZip(process.execPath.slice(0, -6)+'package.nw');
+	  var spawn = require('child_process').spawn;
+	  var sp = spawn(process.execPath, [true, true], {detached: true});
+	  sp.unref();
+	  gui.App.closeAllWindows();
+	}
+
+    </script>
+</body>
+</html>
