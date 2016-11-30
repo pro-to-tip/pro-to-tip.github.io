@@ -1,20 +1,18 @@
+
 <!DOCTYPE html>
-<html><!-- Mirrored from cache-default06d.cdn.yandex.net/download.cdn.yandex.net/tech/ru/speechkit/jsapi/doc/examples/html/textline.html by HTTraQt Website Copier/1.x [Karbofos 2012-2015] Ср, 30 ноя 2016 15:46:08 GMT --><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html>
+<head>
     <meta charset="UTF-8">
     <title>Пример использования поля для голосового ввода.</title>
-    <script src="%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0._files/jquery.js" type="text/javascript"></script>
-    <script src="%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0._files/webspeechkit.js" type="text/javascript"></script><script type="text/javascript" src="%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0._files/webspeechkit-settings_002.js"></script>
-    <script src="%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0._files/webspeechkit-settings.js" type="text/javascript"></script>
-    <script src="%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0._files/textline.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0._files/textline.css">
+    <script src="speechkitcloud-master/yandex.st_jquery_2.1.1_jquery.min.js" type="text/javascript"></script>
+    <script src="speechkitcloud-master/webspeechkit.js" type="text/javascript"></script>
+    <script src="speechkitcloud-master/webspeechkit-settings.js" type="text/javascript"></script>
+    <script src="speechkitcloud-master/textline.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="speechkitcloud-master/textline.css"/>
 </head>
 <body>
-    <div id="textline"><input style="height: 100%; width: 100%; background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version=\&quot;1.1\&quot; id=\&quot;Layer_1\&quot;  xmlns:sketch=\&quot;http://www.bohemiancoding.com/sketch/ns\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot;  x=\&quot;0px\&quot; y=\&quot;0px\&quot; viewBox=\&quot;0 0 112 112\&quot; enable-background=\&quot;new 0 0 112 112\&quot; xml:space=\&quot;preserve\&quot;&gt; &lt;g id=\&quot;tuts\&quot; sketch:type=\&quot;MSPage\&quot;&gt; &lt;g id=\&quot;mic_ff\&quot; sketch:type=\&quot;MSLayerGroup\&quot;&gt; &lt;g id=\&quot;speechkit_vector-9\&quot; transform=\&quot;translate(39.000000, 32.000000)\&quot;  sketch:type=\&quot;MSShapeGroup\&quot; opacity=\&quot;0.9\&quot;&gt; &lt;path id=\&quot;Shape\&quot; d=\&quot;M17,4c2.8,0,5,2.3,5,5.2v15.6c0,2.9-2.2,5.2-5,5.2s-5-2.3-5-5.2V9.2C12,6.3,14.2,4,17,4 M17,0 c-5,0-9,4.1-9,9.2v15.6c0,5.1,4,9.2,9,9.2s9-4.1,9-9.2V9.2C26,4.1,22,0,17,0L17,0z\&quot;/&gt; &lt;path id=\&quot;Shape_1_\&quot;  d=\&quot;M34,23v1.1C34,34,26.4,42,17,42S0,34,0,24.1V23h4v0.1C4,31.3,9.8,38,17,38s13-6.7,13-14.9V23H34z\&quot;/&gt; &lt;rect id=\&quot;Rectangle-311\&quot; x=\&quot;15\&quot; y=\&quot;41\&quot; width=\&quot;4\&quot; height=\&quot;10\&quot;/&gt; &lt;/g&gt; &lt;/g&gt; &lt;/g&gt; &lt;/svg&gt;&quot;); background-repeat: no-repeat; background-position: right center;"></div>
-    <input id="get_value" value="Получить результат распознавания" type="button">
-    <input id="destroy" value="Удалить поле" type="button">
-
-
-
-
-</body><!-- Mirrored from cache-default06d.cdn.yandex.net/download.cdn.yandex.net/tech/ru/speechkit/jsapi/doc/examples/html/textline.html by HTTraQt Website Copier/1.x [Karbofos 2012-2015] Ср, 30 ноя 2016 15:46:09 GMT --></html>
+    <div id="textline"></div>
+    <input type="button" id="get_value" value="Получить результат распознавания"/>
+    <input type="button" id="destroy" value="Удалить поле"/>
+</body>
+</html>
