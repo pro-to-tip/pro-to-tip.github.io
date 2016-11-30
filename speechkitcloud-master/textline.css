@@ -1,0 +1,8 @@
+#textline {
+    margin-bottom: 20px;
+    height: 30px;
+    width: 200px;
+}
+#textline input {
+    font-size: 12pt;
+}
