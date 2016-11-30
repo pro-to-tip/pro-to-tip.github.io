@@ -2272,8 +2272,8 @@
              *     console.log("Результат распознавания: " + textline.value());
              * }, 5000);
              */
-            value: function () {
-                return _this.final_result;
+           // value: function () {
+          //      return _this.final_result;
             }
         };
     };
