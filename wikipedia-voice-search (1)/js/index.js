@@ -3,7 +3,7 @@
     var wiki = {};
     wiki.jsonp = '&callback=JSON_CALLBACK';
     wiki.getWiki = function(term) {
-      var endPoint = 'https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=15&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=';
+      var endPoint = 'https://ru.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=15&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=';
       return $http.jsonp(endPoint + term + wiki.jsonp);
     };
 
@@ -51,7 +51,7 @@
 
     //Render Data
     function Render(data) {
-      var url = 'http://en.wikipedia.org/?curid=';
+      var url = 'http://ru.wikipedia.org/?curid=';
       var Value = data.query.pages;
       $scope.MainData.results = []; // reset data
       for (var key in Value) {
@@ -70,7 +70,7 @@
 
         source: function(request, response) {
           $.ajax({
-            url: "https://en.wikipedia.org/w/api.php",
+            url: "https://ru.wikipedia.org/w/api.php",
             dataType: "jsonp",
             data: {
               'action': "opensearch",
