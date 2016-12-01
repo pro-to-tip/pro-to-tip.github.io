@@ -8,7 +8,7 @@
     };
 
     wiki.getRandom = function() {
-      var endPoint = 'http://randomword.setgetgo.com/get.php';
+      var endPoint = 'https://randomword.setgetgo.com/get.php';
       return $http.jsonp(endPoint + "?callback=JSON_CALLBACK");
     };
 
@@ -51,7 +51,7 @@
 
     //Render Data
     function Render(data) {
-      var url = 'http://ru.wikipedia.org/?curid=';
+      var url = 'https://ru.wikipedia.org/?curid=';
       var Value = data.query.pages;
       $scope.MainData.results = []; // reset data
       for (var key in Value) {
