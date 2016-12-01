@@ -1,0 +1,27 @@
+
+.form-control-feedback{
+  cursor:pointer;  
+}
+
+.card{
+  cursor:pointer;
+}
+
+.card:hover{
+    box-shadow: 1px 1px tomato;
+}
+
+.mic_span a{
+  display:block;
+  margin:10px;
+}
+
+.jumbotron{
+  padding: 0.5em 0.6em;
+}
+.listen{
+  color:red;
+}
+.tweet{
+  display:inline-block;
+}
