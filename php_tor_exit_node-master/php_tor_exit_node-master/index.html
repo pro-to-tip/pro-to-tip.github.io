@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex, nofollow" />
+		<title>Tor exit node</title>
+		<link type="text/css" rel="stylesheet" href="css/roadster.css" />
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+		<script type="text/javascript">
+			var updateTimeout;
+			// var lastDownload = 0;
+
+			$(function() {
+				var download = new Gauge('download');
+				var upload = new Gauge('upload');
+				var users = new Gauge('connections');
+				updateGauges();
+
+				function updateGauges() {
+					$.getJSON('tor.json.php', function(data) {
+						var maxUsers = 250;
+						var totalDownload = data.usedDownload + data.leftDownload;
+						var totalUpload = data.usedUpload + data.leftUpload;
+						// var speed = (lastDownload == 0) ? 0 : (data.usedDownload - lastDownload) / 5;
+
+						$("#or_connections").text(data.connections);
+						// download.draw(speed, 62500);
+						download.draw(data.usedDownload, totalDownload);
+						upload.draw(data.usedUpload, totalUpload)
+						users.draw(data.connections, maxUsers);
+						// lastDownload = data.usedDownload;
+					});
+					updateTimeout = setTimeout(arguments.callee, 5000);
+				}
+
+				$(".dial").draggable();
+			});
+
+
+			Number.prototype.toRad = function() {
+				return this * Math.PI / 180;
+			}
+
+			function Gauge(id) {
+				var canvas = $("#" + id + " canvas")[0];
+				this.context = canvas.getContext("2d");
+				this.w = canvas.width;
+				this.h = canvas.height;
+				this.lastVal = 0;
+			}
+
+			Gauge.prototype = {
+				dialMin: 40,
+				dialMax: 320,
+				dialCenter: [50, 50],
+				needleCenter: [4.5, 4.5],
+				context: {},
+				w: 0,
+				h: 0,
+				lastAngle: 0
+			}
+
+			Gauge.prototype.valCmp = function(a, b) {
+				switch(true) {
+					case (a > b):
+						return 0.5;
+					case (a < b):
+						return -0.5;
+					default:
+						return 0;
+				}
+			}
+
+			Gauge.prototype.draw = function(val, max) {
+				val = (val > max) ? max : val;
+				var needle = new Image();
+				var angle = Math.round( ( (val / max) * (this.dialMax - this.dialMin) ) + this.dialMin );
+				var current = (this.lastAngle == 0) ? angle : this.lastAngle;
+				var delta = this.valCmp(angle, current);
+				var self = this;
+				needle.onload = function() {
+					current += delta;
+					self.context.save();
+					self.context.clearRect( 0, 0, self.w, self.h );
+					self.context.translate(self.w / 2, self.h / 2);
+					self.context.rotate( (current).toRad() );
+					self.context.drawImage(needle, -self.needleCenter[0], -self.needleCenter[1]);
+					self.context.restore();
+					if (angle == current) {
+						self.lastAngle = angle;
+					} else {
+						setTimeout(arguments.callee, 10);
+					}
+				}
+				needle.src = "images/needle.png";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="page">
+			<a id="top"></a>
+			<div id="dials">
+				<div id="header">
+					These gauges are almost 20% cooler. <span class="stamp">APPROVED</span>
+				</div>
+				<div id="download" class="dial">
+					<canvas class="needle" width="100" height="100"></canvas>
+					<span>download</span>
+				</div>
+				<div id="upload" class="dial">
+					<canvas class="needle" width="100" height="100"></canvas>
+					<span>upload</span>
+				</div>
+				<div id="connections" class="dial">
+					<canvas class="needle" width="100" height="100"></canvas>
+					<span>users</span>
+				</div>
+			</div>
+			<div id="logo">
+				<a href="https://www.torproject.org/">
+					<img src="images/tor-logo.png" alt="Tor" title="Tor" />
+				</a>
+				<h1 id="title">exit node</h1>
+			</div>
+			<div id="description">
+				<h2>Description</h2>
+				<div class="epigraph">
+					«A closed mind is a good thing to lose.»<br />
+					— Anonymous
+				</div>
+				<h3>Introduction</h3>
+				<p>
+					For starters, let me predict what you're thinking about right now. I mean it's easy, it's like "WTF?! Where the hell I am?".<br />
+					And yeah, that's the right question to ask, so I try to answer you to the fullest extent possible.
+				</p>
+				<p>
+					You, my friend, are accidently(or not, I dunno) came to a Tor exit node. A solid part of <a href="https://www.Torproject.org/">Tor Anonymity Network</a>. And you probably start to wonder what Tor is and how it's related to exits and
+					nodes and such? Well, you see, there are millions, yep I mean it, millions of people out there, who feel insecure while surfing the internet. They feel so for a whole lot of
+					reasons like: goverment opression, censorship, private and family matters or even natural shyness. The Tor is here just for this kind of people! It provides them,
+					what they need the most - confidence. Confidence in their privacy, anonymity and future. Tor opens up internet for them and we help Tor to do so.
+				</p>
+				<p>
+					We aren't knights in shining armor, we aren't infinite justice, we just what we are - ordinary people who wants to make the world a better place. There're many relays online.
+					Some of them provides secure access to thousands of people, some are a little smaller(for example this relay serves as an exit point for <b id="or_connections">JS?</b> users).
+					They provide access for many different reasons, on different speeds, on different scales.
+					But what unites them is great ideal of open and free internet where everyone can be equal end secure.
+					I find it ironic, that we need Tor now, so we won't need it in the future.<br />
+					Now that you understand that Tor is a good thing, let us speak about how it works.
+				</p>
+				<span class="top"><a href="#top">To the top</a></span>
+				<h3>About Tor</h3>
+				<p>
+					Tor stands for The Onion Router. Yep, I know, it sounds ridiculous, but lets not be hasty and take a look at technology first.
+					Tor is basicaly a proxy chain with data encryption between bridge nodes. It's somewhat resembles the Internet backbone. However, unlike forementioned backbone,
+					Tor doesn't contain any identifiable information about where the packet came from, and where it'll be heading next. In short no Tor router can tell you both origin and distination of packet.
+					A packet that about to be sent from a client is encrypted with three different keys. First for exit node, than for middle, and last is for the first node in circuit. The layered packet structure
+					resembles layers in the onion, hence The Onion Router. As packet travels from router to router, the layers are getting decrypted by corresponding keys. And on last router in circuit, now unencrypted
+					request, can be sent to its destination. When router gets reply from server, proccess will start again only in reverse direction.
+					For more information you could visit this website.
+				</p>
+				<span class="top"><a href="#top">To the top</a></span>
+				<h3>Abuse</h3>
+				<p>
+					Now that you read all of that, you probably start to think that we are crazy to provide this much anonymity to just about anyone, as it could possibly be abused.
+					And you're somewhat right about that. But it's all about comparing positives and negatives. We discussed positives two paragraphs above,
+					so lets talk about negatives and bust some of the common myths by the way.
+				</p>
+				<p>
+					And first on the list will probably be spamming? Nope. It's not possible with this relay as its exit policy blocks
+					port 25, that's used for outgoing mail. And even if it wasn't, Tor is high latency network, not really suited for transfer of many small packets.
+					So I guess it'll probably be easier to just register random account on random freemail site, use it to spam and then just abandon it.
+				</p>
+				<p>
+					So our first guess is off and Tor isn't really suitable for sending spam. What's next?<br />
+					Oh right, there's hackers threat. Hackers that use Tor can't be captured and their crimes can go unpunished.
+					And again, no. A really danger criminals don't use Tor at all. I mean what they need Tor for, if they have many innocent user's computers,
+					that they use as proxy for conducting their illegal activity.
+				</p>
+				<p>
+					So yet another miss! What else? Illegal intellectual property sharing(Piracy).
+					Oh my, that's a problem... Well, not really. You see, I've already mentioned that Tor isn't exactly a speedy network. There're many people who want to use network,
+					but not so many who could or willing to launch a router. And for actions like filesharing there are much more suitable anonymous P2P programs based at DHT network.
+					And, by the way, default exit policy block all high numbered ports, these applications tend to use.
+				</p>
+				<p>
+					Finally let us conclude our findings and bust the myths 8).
+				</p>
+					<ul>
+						<li><s>Tor helps spammers</s> - BUSTED! Spamers can do well even without Tor.</li>
+						<li><s>Tor helps hackers</s> - BUSTED! Tor is useless for hackers, as they have their own networks.</li>
+						<li><s>Tor helps piracy</s> - BUSTED! Right now Tor is too slow and exit policy block P2P applications.</li>
+					</ul>
+				<span class="top"><a href="#top">To the top</a></span>
+				<h3>Blocking Tor</h3>
+				<p>
+					Oh god, why would you do that? No seriously, after all that friendly chit chating we've done about how great Tor is and how it has practically no flaws,
+					you still insist to know how to block it. Okay okay, don't get so worked up over nothing, it's bad for you health.
+					There's official <a href="https://www.torproject.org/tordnsel/dist/">DNSRBL</a> list, that can help you to find tor router adresses and block them.
+					There're also many ready for use firewall rules on the Internet, just type "block Tor" into your favourite search engine and you eventually find what you need.
+					But please consider what we've talked about. Think twice about it, before you deside to actually block Tor. I mean, you don't want to hurt innocent visitors just because there are a few
+					"bad apples". On other hand you can advertise your support for Tor, maybe even run your very own router, and it can raise your public image unbelivably high.
+					Just think about possibilities...
+				</p>
+				<span class="top"><a href="#top">To the top</a></span>
+				<h2>Contact</h2>
+				<p>
+					There shall be some contact info!<br />
+					Email, Phone<br />
+					Home Address<br />
+					Credit Card Number and such.<br />
+					Hahaha, as if :))))))))
+				</p>
+				<p>
+					Anyway, thank you for reading!
+					That is, if you actually read.
+				</p>
+				<span class="top"><a href="#top">To the top</a></span>
+			</div>
+			<div id="footer">
+				Rainbow Dash is &copy;2011 by Hasbro. Eeyep, It's sad but true.<br />
+				"Tor" and the "Onion Logo" are registered trademarks of The Tor Project, Inc.<br />
+				I own nothing... :whine: I'm no one... :sob: Just kill me already! :cry:
+			</div>
+		</div>
+	</body>
+</html>

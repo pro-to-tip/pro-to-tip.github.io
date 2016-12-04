@@ -1,0 +1,128 @@
+@font-face {
+	font-family: 'CelestiaReduxMedium';
+	src: url('celestiamediumredux1.5-webfont.eot');
+	src: url('celestiamediumredux1.5-webfont.eot?#iefix') format('embedded-opentype'),
+		url('celestiamediumredux1.5-webfont.woff') format('woff'),
+		url('celestiamediumredux1.5-webfont.ttf') format('truetype'),
+		url('celestiamediumredux1.5-webfont.svg#CelestiaReduxMedium') format('svg'),
+		local('Celestia Redux');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background: #AAA url("../images/background.jpg") fixed;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: sans-serif;
+}
+
+a img {
+	border: 0 none;
+}
+
+.stamp {
+	display: block;
+	width: 100px;
+	color: #F00;
+	font-family: CelestiaReduxMedium;
+	font-size: 15pt;
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+	border: 2px solid #F00;
+	border-radius: 5px;
+	position: relative;
+	left: 250px;
+	top: -25px;
+	opacity: 0.4
+}
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 10px;
+	padding-top: 20px;
+	background: #FFF;
+	border-radius: 10px;
+	-webkit-box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 1);
+	box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 1); 
+}
+
+#logo {
+	width: 300px;
+	height: 165px;
+	text-align: center;
+}
+
+#title {
+	margin: 0;
+	color: #8A5C9D;
+}
+
+#dials {
+	float: right;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#dials #header {
+	font-family: CelestiaReduxMedium;
+	font-size: 15pt;
+	margin-bottom: 5px;
+	height: 30px;
+}
+
+#dials .dial {
+	cursor: move;
+	width: 100px;
+	height: 130px;
+	background: transparent url("../images/dial.png") no-repeat;
+	display: inline-block;
+	font-family: monospace;
+	font-size: 15pt;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#dials .dial span {
+	background-color: #FFF;
+	padding: 2px;
+	border-radius: 5px;
+}
+
+#description {
+	text-align: center;
+	padding: 20px;
+	background: #FFF url("../images/rd.png") no-repeat 100% 100%;
+}
+
+#description .epigraph {
+	text-align: right;
+	font-style: italic;
+}
+
+#description .top a {
+	color: #F00;
+	font-size: 10pt;
+	text-decoration: none;
+}
+
+#description .top a:hover {
+	color: #F99;
+}
+
+#description ul {
+	text-align: left;
+}
+
+#footer {
+	border-top: 1px solid #AAA;
+	font-size: 8pt;
+	text-align: center;
+	padding: 5px;
+	color: #666;
+}
