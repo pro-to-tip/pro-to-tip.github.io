@@ -1,0 +1,41 @@
+<head>
+  <title>ch@th</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="terminal">
+        <p class="prompt"
+ >=====================================                             view sources:
+  ========  ======      =========  ====            <a href="https://github.com/etomarat/chath"
+																		target="_blank"
+																  >www.github.com/etomarat/chath</a>
+  ========  =====   ==   ========  ====
+  ========  =====  =     ===  ===  ====
+  ==   ===  =====  =  =  ==    ==  ====
+  =  =  ==    ===  =  =  ===  ===    ==
+  =  =====  =  ==  =  =  ===  ===  =  =
+  =  =====  =  ==  =   =====  ===  =  =
+  =  =  ==  =  ==   ==   ===  ===  =  =
+  ==   ===  =  ===      ====   ==  =  =
+  =====================================
+  welcomes you         chath.meteor.com
+        </p>
+        {{#each messages}}
+          {{> message}}
+        {{/each}}
+        <p class="prompt output new-output"></p>
+    </div>
+  </div>
+  <form class="prompt-form">
+    <input type="text" name="input" autocomplete="off" class="input">
+  </form>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+</body>
+
+<template name="message">
+  <div class="prompt-holder" data-text="{{glitchText}}">
+    <p datetime="{{createdAt}}" class="prompt">{{{text}}}</p>
+  </div>
+</template>

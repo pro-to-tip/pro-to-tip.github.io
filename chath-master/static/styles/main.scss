@@ -1,0 +1,129 @@
+$green: #1ff042;
+
+@import "./bourbon/bourbon";
+@import "./glitches";
+
+@include keyframes(cursor-blink) {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+body{
+  background-color: #122F0A;
+  position: relative;
+  min-height: 100%;
+  position: relative;
+  animation: turn-on 4s linear;
+  animation-fill-mode: forwards;
+}
+
+.terminal{
+	position: relative;
+	padding: 4rem;
+	width: 114ch;
+	margin: 0 auto;
+	a {
+		color: inherit;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline
+		}
+	}
+
+	.prompt{
+		color: $green;
+		display: block;
+		font-family: 'AndaleMono', monospace;
+		font-weight: bold;
+		font-size: 0.9em;
+		letter-spacing: 0.15em;
+		white-space: pre-wrap;
+		line-height: 1;
+		margin-bottom: 0.75em;
+		position: relative;
+		text-shadow: 0 0 1ex $green, 0 0 2px rgba(255, 255, 255, 0.8);
+
+		&:before {
+			content: '> ';
+			display: inline-block;
+		}
+		img {
+			max-width: 98ch;
+			display: inline-block;
+			vertical-align: text-top;
+			border: 2px dotted $green;
+		}
+		iframe {
+			max-width: 266px;
+			max-height: 150px;
+			border: 2px dotted $green;
+			display: inline-block;
+			vertical-align: text-top;
+		}
+	}
+
+	.new-output{
+		display: inline-block;
+		&:after {
+			display: inline-block;
+			vertical-align: -0.15em;
+			width: 0.75em;
+			height: 1em;
+			margin-left: 5px;
+			background: $green;
+			box-shadow: 1px 1px 1px rgba($green,0.65), -1px -1px 1px rgba($green,0.65), 1px -1px 1px rgba($green,0.65), -1px 1px 1px rgba($green,0.65);
+			@include animation(cursor-blink 1.25s steps(1) infinite);
+			content: '';
+		}
+	}
+}
+
+.prompt-form{
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.vignette {
+  box-shadow: inset 0 0 10em black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  content: "";
+  pointer-events: none;
+}
+
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.2) 70%,
+    rgba(0,0,0,0.6)
+  );
+  background-size: 100% 0.3rem;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
