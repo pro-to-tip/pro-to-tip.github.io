@@ -1,0 +1,13 @@
+Package: markdownapp
+Type: OpenCPU Application
+Title: Markdown Application for OpenCPU
+Version: 0.1
+Date: 2013-08-27
+Author: Jeroen Ooms
+Maintainer: Jeroen <jeroenooms@gmail.com>
+Description: OpenCPU App for markdown package
+License: Apache2
+Depends:
+    knitr
+Suggests:
+    opencpu (>= 1.0.1)
